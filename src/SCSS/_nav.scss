@@ -1,0 +1,53 @@
+@mixin nav($color-s, $color-m, $color-l) {
+    #navigation {
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 96vw;
+        min-height: 4vh;
+        padding: 0 2vw;
+        background-color: $color-m;
+        border-bottom: 2px solid $color-s;
+        a {
+            text-decoration: none;
+        }
+        a, button, span{
+            font: inherit;
+            color: $color-s;
+            font-size: 1.2em;
+            margin: 0;
+            padding: 0;
+            padding: .3em;
+        }
+        #right-side {
+            display:flex;
+            align-items: center;
+            div {
+                background-color: $color-s;
+                button {
+                    padding: .3em;
+                    font-size: 1em;
+                    color: $color-m;
+                    background-color: inherit;
+                    border: none;
+                    cursor: pointer;
+                    outline: none;
+                }
+            }
+        }
+        #center-side {
+            display:flex;
+            align-items: center;
+            div {
+                background-color: $color-s;
+                span {
+                    display: inline-block;
+                    font-size: 1em;
+                    color: $color-m;
+                }
+            }
+        }
+    }
+}

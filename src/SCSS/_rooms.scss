@@ -1,0 +1,66 @@
+@mixin rooms($color-s, $color-m, $color-l) {
+    %buttons {
+        display: inline-block;
+        font: inherit;
+        text-align: center;
+        font-size: 1.2em;
+        padding: 1.3vh 1.3vw;
+        color: $color-s;
+        background-color: $color-m;
+        border: 2px solid $color-s;
+        transition-duration: .2s;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    #rooms {
+        position: relative;
+        top: 20vh;
+        margin: auto;
+        width: 20vw;
+        min-height: 15vh;
+        padding: 1vh 1vw;
+        background-color: $color-l;
+        border: 2px solid $color-s;
+        .buttons-container {
+            min-height: inherit;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+            button, a {
+                @extend %buttons;
+            }
+            a:hover {
+                background-color: rgb(97, 255, 150);
+            }
+            button:hover {
+                background-color: rgb(244, 252, 133);
+            }
+        }
+        .room-list {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -10.2vw;
+            width: 10vw;
+            background-color: $color-l;
+            overflow: auto;
+            a {
+                display: block;
+                border: none;
+                margin-bottom: 1vh;
+                background-color: $color-s;
+                text-align: center;
+                font-size: 1em;
+                color: $color-l;
+                width: 100%;
+                padding: 1vh 0;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            :last-child {
+                margin: 0;
+            }
+        }
+    }
+}
