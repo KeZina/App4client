@@ -15,6 +15,7 @@ const Login = () => {
                         <span> Get temporary registry...</span>
                     </h4>
                     <h4>
+                        {/* add e-mail confirm */}
                         Want to hold your name?
                         <span> Get permanent regisrty...</span>
                     </h4>

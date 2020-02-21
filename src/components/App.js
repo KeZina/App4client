@@ -6,8 +6,10 @@ import Login from './Login';
 import Rooms from './rooms/Rooms';
 import Room from './rooms/Room';
 import CreateRoom from './rooms/CreateRoom';
+import useWebSocket from '../hooks/useWebSocket';
 
 const App = () => {
+  useWebSocket();
 return (
   <>
     {/* {
