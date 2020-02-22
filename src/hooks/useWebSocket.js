@@ -17,7 +17,11 @@ const useWebSocket = () => {
        socket.on('user', data => setUserData(data))
     }, [socket])
 
-    useUserHandler(userData);
+    const user = useUserHandler(socket, userData);
+
+    return {
+        user
+    }
 }
 
 export default useWebSocket;
