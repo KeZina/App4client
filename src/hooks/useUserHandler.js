@@ -52,6 +52,7 @@ const useUserHandler = (socket, data) => {
         })
     }
 
+    // if user have temporary acc delete it, else only remove token
     const logout = e => {
         e.preventDefault();
 
@@ -68,6 +69,16 @@ const useUserHandler = (socket, data) => {
         else if(localStorage.getItem('token') && history.location.pathname === '/') history.push('/rooms');
     }, [localStorage.getItem('token'), history.location.pathname])
 
+    // check if user auth
+    useEffect(() => {
+        if(socket && localStorage.getItem('token')) {
+            socket.emit('user', {
+                type: 'auth',
+                token: localStorage.getItem('token')
+            })
+        }
+    }, [socket])
+    
     // handle responses
     useEffect(() => {
         const {type, auth, name, token, message} = data;

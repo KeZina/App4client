@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { RoomContext } from '../../context';
 
 const CreateRoom = () => {
+    const room = useContext(RoomContext);
+
     return(
         <div className = 'container-1'>
             <div id = 'create-room'>
-                <form>
+                <form onSubmit = {room.createRoom}>
                     <label>
                         <span>Name:</span>
                         <input name = 'name' type = 'text' minLength = "3" maxLength = "20" />

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Message = () => {
+const Messages = () => {
     return (
         <div className = 'message' key = {Math.round(Math.random() * 1e5)}>
             <span>Send by:</span>
@@ -12,4 +12,4 @@ const Message = () => {
     )
 }
 
-export default Message;
+export default Messages;
