@@ -52,6 +52,16 @@ const useUserHandler = (socket, data) => {
         })
     }
 
+    const logout = e => {
+        e.preventDefault();
+
+        socket.emit('user', {
+            type: 'logout',
+            token: localStorage.getItem('token')
+        })
+        localStorage.removeItem('token');
+    }
+
     // redirect no-auth user
     useEffect(() => {
         if(!localStorage.getItem('token')) history.push('/');
@@ -72,9 +82,11 @@ const useUserHandler = (socket, data) => {
     }, [data])
 
     return {
+        ...user,
         createPermAcc,
         createTempAcc,
-        login
+        login,
+        logout
     }
 }
 

@@ -24,17 +24,14 @@
         #right-side {
             display:flex;
             align-items: center;
-            div {
+            button {
+                padding: .3em;
+                font-size: 1em;
+                color: $color-m;
                 background-color: $color-s;
-                button {
-                    padding: .3em;
-                    font-size: 1em;
-                    color: $color-m;
-                    background-color: inherit;
-                    border: none;
-                    cursor: pointer;
-                    outline: none;
-                }
+                border: none;
+                cursor: pointer;
+                outline: none;
             }
         }
         #center-side {
