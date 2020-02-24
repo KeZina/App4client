@@ -85,10 +85,13 @@ const useUserHandler = (socket, data) => {
 
         if(type === 'auth') {
             if(token) localStorage.setItem('token', token);
-
             setUser({...user, auth, name});
         } else if(type === 'error') {
-            if(message === 'jwt expired') localStorage.removeItem('token');
+            if(message === 'jwt expired') {
+                localStorage.removeItem('token');
+                localStorage.removeItem('romUrl');
+                setUser(anonymous);
+            }
         }
     }, [data])
 

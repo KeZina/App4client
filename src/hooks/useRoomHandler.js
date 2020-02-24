@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 const useRoomHandler = (socket, data) => {
     const initialRoom = {
         name: null,
-        messages: null,
+        messages: [],
         roomList: []
     }
     const [room, setRoom] = useState(initialRoom);
@@ -20,34 +20,54 @@ const useRoomHandler = (socket, data) => {
         })
     }
 
-    // get list of rooms
     const getRoomList = () => {
         socket.emit('room', {
             type: 'roomList',
         })
     }
 
-    // get room data
-    useEffect(() => {
-        socket &&
+    // get room data when user enter of the <Rooms />
+    const enterRoom = roomUrl => {
         socket.emit('room', {
-            type: 'roomData',
+            type: 'enterRoom',
+            roomUrl
+        })
+        localStorage.setItem('roomUrl', roomUrl);
+        history.push(`/rooms/${roomUrl}`)
+    }
+
+    const exitRoom = () => {
+        socket.emit('room', {
+            type: 'exitRoom',
             roomUrl: localStorage.getItem('roomUrl')
         })
-    }, [localStorage.getItem('roomUrl')])
+        localStorage.removeItem('roomUrl');
+        history.push('/rooms');
+    }
+
+    // get room data when user reload page
+    useEffect(() => {
+        socket && localStorage.getItem('roomUrl') &&
+        socket.emit('room', {
+            type: 'enterRoom',
+            roomUrl: localStorage.getItem('roomUrl')
+        })
+    }, [socket])
 
     // handleResponse
     useEffect(() => {
         const {type, name, messages, roomUrl, roomList, message} = data;
         
         if(type === 'createRoom') {
-            localStorage.setItem('roomUrl', roomUrl);
             setRoom({...room, name});
+            localStorage.setItem('roomUrl', roomUrl);
             history.push(`/rooms/${roomUrl}`);
         } else if(type === 'roomList') {
             setRoom({...room, roomList});
-        } else if(type === 'roomData') {
+        } else if(type === 'enterRoom') {
             setRoom({...room, name, messages});
+        } else if(type ==='exitRoom') {
+            setRoom(initialRoom);
         } else if(type === 'error') {
             console.log(message)
         }
@@ -56,7 +76,9 @@ const useRoomHandler = (socket, data) => {
     return {
         ...room,
         createRoom,
-        getRoomList
+        getRoomList,
+        enterRoom,
+        exitRoom
     }
 }
 

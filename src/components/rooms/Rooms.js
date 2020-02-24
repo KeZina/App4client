@@ -12,7 +12,7 @@ const Rooms = () => {
     }
     const list = room.roomList.map(item => {
         return (
-            <span key = {item._id}>
+            <span key = {item._id} onClick = {() => room.enterRoom(item._id)}>
                 {item.name}
             </span>
         )

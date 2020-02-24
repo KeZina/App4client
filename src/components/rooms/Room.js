@@ -1,10 +1,12 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Messages from './Messages';
 import { RoomContext } from '../../context';
 
 const Room = () => {
+    const [showUserList, setShowUserList] = useState(false);
+    const handleUserList = () => setShowUserList(!showUserList);
+
     const room = useContext(RoomContext);
-    console.log(room);
 
     return (
         <div className = 'container-1'>
@@ -18,21 +20,21 @@ const Room = () => {
                     </div>
                 </div>
                 <div className = 'sidebar right'>
-                    <button>
+                    <button onClick = {room.exitRoom}>
                         Exit room
                     </button>
-                    <button>
+                    <button onClick = {handleUserList}>
                         Invite user
                     </button>
                 </div>
-                {/* {
-                    listVisible &&
+                {
+                    showUserList &&
                     <div className = 'user-list'>
                         <h3>
                             Users to invite:
                         </h3>
                     </div>
-                } */}
+                }
                 <h2>{room.name}</h2>
                 <div className = 'chat'>
                     <div className = 'message-container'>
