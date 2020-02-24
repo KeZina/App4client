@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useHistory } from 'react-router-dom';
 
-const useRoomHandler = (socket, data) => {
+const useRoomHandler = (socket, data, user) => {
     const initialRoom = {
         name: null,
         messages: [],
@@ -37,11 +37,14 @@ const useRoomHandler = (socket, data) => {
     }
 
     const exitRoom = () => {
-        socket.emit('room', {
-            type: 'exitRoom',
+        socket.emit('roomUsers', {
+            type: 'removeUsers',
+            name: user,
             roomUrl: localStorage.getItem('roomUrl')
         })
+
         localStorage.removeItem('roomUrl');
+        setRoom(initialRoom);
         history.push('/rooms');
     }
 
@@ -65,9 +68,12 @@ const useRoomHandler = (socket, data) => {
         } else if(type === 'roomList') {
             setRoom({...room, roomList});
         } else if(type === 'enterRoom') {
+            socket.emit('roomUsers', {
+                type: 'addUsers',
+                name: user,
+                roomUrl: localStorage.getItem('roomUrl')
+            })
             setRoom({...room, name, messages});
-        } else if(type ==='exitRoom') {
-            setRoom(initialRoom);
         } else if(type === 'error') {
             console.log(message)
         }

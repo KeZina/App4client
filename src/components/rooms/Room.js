@@ -1,12 +1,21 @@
 import React, { useContext, useState } from 'react';
 import Messages from './Messages';
-import { RoomContext } from '../../context';
+import { RoomContext, CounterContext } from '../../context';
 
 const Room = () => {
     const [showUserList, setShowUserList] = useState(false);
     const handleUserList = () => setShowUserList(!showUserList);
 
     const room = useContext(RoomContext);
+    const counter = useContext(CounterContext);
+
+    const listOfUsers = counter.roomUsers.map(user => {
+        return (
+            <span key = {user}>
+                {user}
+            </span>
+        )
+    })
 
     return (
         <div className = 'container-1'>
@@ -16,7 +25,7 @@ const Room = () => {
                         Users:
                     </h3>
                     <div>
-
+                        {listOfUsers}
                     </div>
                 </div>
                 <div className = 'sidebar right'>

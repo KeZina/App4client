@@ -47,8 +47,8 @@ const useUserHandler = (socket, data) => {
 
         socket.emit('user', {
             type: 'login',
-            name: e.target.name,
-            password: e.target.password
+            name: e.target.name.value,
+            password: e.target.password.value
         })
     }
 
@@ -85,6 +85,18 @@ const useUserHandler = (socket, data) => {
 
         if(type === 'auth') {
             if(token) localStorage.setItem('token', token);
+
+            if(auth.temp || auth. perm) {
+                socket.emit('siteUsers', {
+                    type: 'addUsers',
+                    name
+                })
+            } else if(!(auth.temp || auth.perm)) {
+                socket.emit('siteUsers', {
+                    type: 'removeUsers',
+                    name: user.name
+                })
+            }
             setUser({...user, auth, name});
         } else if(type === 'error') {
             if(message === 'jwt expired') {
@@ -93,7 +105,24 @@ const useUserHandler = (socket, data) => {
                 setUser(anonymous);
             }
         }
+
     }, [data])
+
+    // useEffect(() => {
+    //     // window.addEventListener(
+    //     //     'onunload', 
+    //     //     socket && socket.emit('siteUsers', {
+    //     //         type: 'removeUsers',
+    //     //         name: user.name
+    //     //     })
+    //     // )
+    //     const f = () => alert(123123213);
+
+    //     window.addEventListener('onbeforeunload', f)
+
+    //     // return () => window.removeEventListener('onbeforeunload', f);
+
+    // }, [])
 
     return {
         ...user,
