@@ -1,14 +1,17 @@
 import io from 'socket.io-client';
 import { useEffect, useState } from 'react';
-import useUserHandler from './useUserHandler';
-import useRoomHandler from './useRoomHandler';
+import useUser from './useUser';
+import useRoom from './useRoom';
+import useMessage from './useMessage';
 import useCounter from './useCounter';
+import useError from './useError';
 
 const useWebSocket = () => {
     const [socket, setSocket] = useState();
  
     const [userData, setUserData] = useState({});
     const [roomData, setRoomData] = useState({});
+    const [messageData, setMessageData] = useState({});
     const [counterData, setCounterData] = useState({});
 
     useEffect(() => {
@@ -20,18 +23,22 @@ const useWebSocket = () => {
         if(socket) {
             socket.on('user', data => setUserData(data));
             socket.on('room', data => setRoomData(data));
+            socket.on('message', data => setMessageData(data));
             socket.on('counter', data => setCounterData(data));
         }
     }, [socket])
 
 
-    const user = useUserHandler(socket, userData);
-    const room = useRoomHandler(socket, roomData, user.name);
+    const user = useUser(socket, userData);
+    const room = useRoom(socket, roomData, user.name);
+    const message = useMessage(socket, messageData);
     const counter = useCounter(counterData);
+    // useError();
 
     return {
         user,
         room,
+        message,
         counter
     }
 }

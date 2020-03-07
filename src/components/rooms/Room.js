@@ -1,17 +1,29 @@
 import React, { useContext, useState } from 'react';
 import Messages from './Messages';
-import { RoomContext, CounterContext } from '../../context';
+import { RoomContext, CounterContext, MessageContext } from '../../context';
 
 const Room = () => {
     const [showUserList, setShowUserList] = useState(false);
-    const handleUserList = () => setShowUserList(!showUserList);
+    const handleSiteUsers = () => setShowUserList(!showUserList);
+    const handleInvite = user => message.inviteUser(user);
 
     const room = useContext(RoomContext);
+    const message = useContext(MessageContext);
     const counter = useContext(CounterContext);
 
-    const listOfUsers = counter.roomUsers.map(user => {
+    console.log(counter.roomUsers)
+
+    const roomUsers = counter.roomUsers.map(user => {
         return (
             <span key = {user}>
+                {user}
+            </span>
+        )
+    })
+
+    const siteUsers = counter.siteUsers.map(user => {
+        return (
+            <span key = {user} onClick = {() => handleInvite(user)}>
                 {user}
             </span>
         )
@@ -25,14 +37,14 @@ const Room = () => {
                         Users:
                     </h3>
                     <div>
-                        {listOfUsers}
+                        {roomUsers}
                     </div>
                 </div>
                 <div className = 'sidebar right'>
                     <button onClick = {room.exitRoom}>
                         Exit room
                     </button>
-                    <button onClick = {handleUserList}>
+                    <button onClick = {handleSiteUsers}>
                         Invite user
                     </button>
                 </div>
@@ -42,6 +54,7 @@ const Room = () => {
                         <h3>
                             Users to invite:
                         </h3>
+                        {siteUsers}
                     </div>
                 }
                 <h2>{room.name}</h2>

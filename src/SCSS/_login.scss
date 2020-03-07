@@ -59,6 +59,7 @@
                 background-color: $color-m;
                 border: 2px solid $color-s;
                 transition-duration: .2s;
+                cursor: pointer;
                 &:hover {
                     color: initial;
                 }

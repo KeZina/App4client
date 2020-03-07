@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useHistory } from 'react-router-dom';
 
-const useRoomHandler = (socket, data, user) => {
+const useRoom = (socket, data, user) => {
     const initialRoom = {
         name: null,
         messages: [],
@@ -88,4 +88,4 @@ const useRoomHandler = (socket, data, user) => {
     }
 }
 
-export default useRoomHandler;
+export default useRoom;

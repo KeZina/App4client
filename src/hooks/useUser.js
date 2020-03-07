@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 
-const useUserHandler = (socket, data) => {
+const useUser = (socket, data) => {
     const anonymous = {
         name: null,
         auth: {
@@ -86,7 +86,7 @@ const useUserHandler = (socket, data) => {
         if(type === 'auth') {
             if(token) localStorage.setItem('token', token);
 
-            if(auth.temp || auth. perm) {
+            if(auth.temp || auth.perm) {
                 socket.emit('siteUsers', {
                     type: 'addUsers',
                     name
@@ -133,4 +133,4 @@ const useUserHandler = (socket, data) => {
     }
 }
 
-export default useUserHandler;
+export default useUser;
