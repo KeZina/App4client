@@ -1,43 +1,49 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
-const useMessage = (socket, data) => {
-    const [roomMessages, setRoomMessages] = useState([]);
-    const [notifications, setNotifications] = useState([]);
+const useMessage = (socket, data, enterRoom) => {
+    const [notes, setNotes] = useState([]);
 
-    const inviteUser = name => {
+    const inviteUser = (name, sender, room) => {
         socket.emit('message', {
             type: 'inviteUser',
-            name
+            name,
+            sender,
+            room
         })
     }
 
-    // const acceptInvite = () => {
+    const accept = (id, roomUrl) => {
+        const filteredNotes = notes.filter(note => note.id !== id);
+        setNotes(filteredNotes);
+        enterRoom(roomUrl);
+    }  
 
-    // }
-
-    // const refuseInvite = () => {
-
-    // }
+    const refuse = id => {
+        const filteredNotes = notes.filter(note => note.id !== id);
+        setNotes(filteredNotes);
+    }
 
     useEffect(() => {
-        const {type, content} = data;
+        const {type, content, roomUrl} = data;
 
-        if(type === 'inviteToRoom') {
-            setNotifications([
-                ...notifications,
+        if(type === 'note') {
+            setNotes([
+                ...notes,
                 {
                     type,
-                    content
+                    content,
+                    roomUrl,
+                    id: Math.floor(Math.random() * 1e10)
                 }
             ])
         }
     }, [data])
 
     return {
-        notifications,
+        notes,
         inviteUser,
-        // acceptInvite,
-        // refuseInvite
+        accept,
+        refuse,
     }
 }
 

@@ -68,6 +68,13 @@ const useRoom = (socket, data, user) => {
         if(type === 'createRoom') {
             setRoom({...room, name});
             localStorage.setItem('roomUrl', roomUrl);
+            socket.emit('users', {
+                type: 'updateUser',
+                reason: 'enter',
+                goal: 'getRoomUsers',
+                name: user,
+                roomUrl: localStorage.getItem('roomUrl')
+            })
             history.push(`/rooms/${roomUrl}`);
         } else if(type === 'roomList') {
             setRoom({...room, roomList});

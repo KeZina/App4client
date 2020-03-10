@@ -17,10 +17,7 @@ const App = () => {
       <RoomContext.Provider value = {room}>
         <MessageContext.Provider value = {message}>
           <CounterContext.Provider value = {counter}>
-            {
-              message.notifications.length !== 0 &&
-              <Notification />
-            }
+            <Notification />
             <Nav />
             <Switch>
               <Route exact path = '/' component = {Login} />

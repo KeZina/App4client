@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react';
 import Messages from './Messages';
-import { RoomContext, CounterContext, MessageContext } from '../../utils/context';
+import { RoomContext, CounterContext, MessageContext, UserContext } from '../../utils/context';
 
 const Room = () => {
     const [showUserList, setShowUserList] = useState(false);
-    const handleSiteUsers = () => setShowUserList(!showUserList);
-    const handleInvite = user => message.inviteUser(user);
+    const handleUserList = () => setShowUserList(!showUserList);
 
+    const user = useContext(UserContext);
     const room = useContext(RoomContext);
     const message = useContext(MessageContext);
     const counter = useContext(CounterContext);
@@ -19,15 +19,13 @@ const Room = () => {
         )
     })
 
-    const siteUsers = counter.siteUsers.map(user => {
+    const siteUsers = counter.siteUsers.map(siteUser => {
         return (
-            <span key = {user} onClick = {() => handleInvite(user)}>
-                {user}
+            <span key = {siteUser} onClick = {() => message.inviteUser(siteUser, user.name, room.name)}>
+                {siteUser}
             </span>
         )
     })
-
-    // console.log(room)
 
     return (
         <div className = 'container-1'>
@@ -44,7 +42,7 @@ const Room = () => {
                     <button onClick = {room.exitRoom}>
                         Exit room
                     </button>
-                    <button onClick = {handleSiteUsers}>
+                    <button onClick = {handleUserList}>
                         Invite user
                     </button>
                 </div>

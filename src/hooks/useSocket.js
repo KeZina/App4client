@@ -29,7 +29,7 @@ const useWebSocket = () => {
 
     const user = useUser(socket, userData);
     const room = useRoom(socket, roomData, user.name);
-    const message = useMessage(socket, messageData);
+    const message = useMessage(socket, messageData, room.enterRoom);
     const counter = useCounter(counterData);
 
     return {
