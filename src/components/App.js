@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { UserContext, RoomContext, CounterContext, MessageContext } from '../context';
+import { UserContext, RoomContext, CounterContext, MessageContext } from '../utils/context';
 import Notification from './Notification';
 import Nav from './Nav';
 import Login from './Login';
@@ -12,7 +12,6 @@ import useSocket from '../hooks/useSocket';
 const App = () => {
   const {user, room, message, counter} = useSocket();
 
-  // rewrite context to redux later
   return (
     <UserContext.Provider value = {user}>
       <RoomContext.Provider value = {room}>

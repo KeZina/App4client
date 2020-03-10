@@ -26,7 +26,7 @@ const useRoom = (socket, data, user) => {
         })
     }
 
-    // get room data when user enter of the <Rooms />
+    // get room data when user enter in the <Rooms />
     const enterRoom = roomUrl => {
         socket.emit('room', {
             type: 'enterRoom',
@@ -37,8 +37,10 @@ const useRoom = (socket, data, user) => {
     }
 
     const exitRoom = () => {
-        socket.emit('roomUsers', {
-            type: 'removeUsers',
+        socket.emit('users', {
+            type: 'updateUser',
+            reason: 'exit',
+            goal: 'getRoomUsers',
             name: user,
             roomUrl: localStorage.getItem('roomUrl')
         })
@@ -50,16 +52,18 @@ const useRoom = (socket, data, user) => {
 
     // get room data when user reload page
     useEffect(() => {
-        socket && localStorage.getItem('roomUrl') &&
-        socket.emit('room', {
-            type: 'enterRoom',
-            roomUrl: localStorage.getItem('roomUrl')
-        })
+        if(socket && localStorage.getItem('roomUrl')) {
+            socket.emit('room', {
+                type: 'enterRoom',
+                roomUrl: localStorage.getItem('roomUrl')
+            })
+            history.push(`/rooms/${localStorage.getItem('roomUrl')}`);
+        }
     }, [socket])
 
     // handleResponse
     useEffect(() => {
-        const {type, name, messages, roomUrl, roomList, message} = data;
+        const {type, name, messages, roomUrl, roomList} = data;
         
         if(type === 'createRoom') {
             setRoom({...room, name});
@@ -68,16 +72,28 @@ const useRoom = (socket, data, user) => {
         } else if(type === 'roomList') {
             setRoom({...room, roomList});
         } else if(type === 'enterRoom') {
-            socket.emit('roomUsers', {
-                type: 'addUsers',
+            socket.emit('users', {
+                type: 'updateUser',
+                reason: 'enter',
+                goal: 'getRoomUsers',
                 name: user,
                 roomUrl: localStorage.getItem('roomUrl')
             })
             setRoom({...room, name, messages});
-        } else if(type === 'error') {
-            console.log(message)
         }
     }, [data])
+
+    // return useMemo(() => {
+    //     return {
+    //         ...room,
+    //         createRoom,
+    //         getRoomList,
+    //         enterRoom,
+    //         exitRoom
+    //     }
+    // },  [room, createRoom, getRoomList, enterRoom, exitRoom])
+
+
 
     return {
         ...room,

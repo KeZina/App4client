@@ -4,7 +4,6 @@ import useUser from './useUser';
 import useRoom from './useRoom';
 import useMessage from './useMessage';
 import useCounter from './useCounter';
-import useError from './useError';
 
 const useWebSocket = () => {
     const [socket, setSocket] = useState();
@@ -28,14 +27,13 @@ const useWebSocket = () => {
         }
     }, [socket])
 
-
     const user = useUser(socket, userData);
     const room = useRoom(socket, roomData, user.name);
     const message = useMessage(socket, messageData);
     const counter = useCounter(counterData);
-    // useError();
 
     return {
+        socket,
         user,
         room,
         message,

@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
-
 const useUser = (socket, data) => {
     const anonymous = {
         name: null,
@@ -81,48 +80,34 @@ const useUser = (socket, data) => {
     
     // handle responses
     useEffect(() => {
-        const {type, auth, name, token, message} = data;
+        const {type, auth, name, token} = data;
+
+        console.log(data)
 
         if(type === 'auth') {
             if(token) localStorage.setItem('token', token);
 
             if(auth.temp || auth.perm) {
-                socket.emit('siteUsers', {
-                    type: 'addUsers',
+                socket.emit('users', {
+                    type: 'addUser',
+                    goal: 'getSiteUsers',
                     name
                 })
             } else if(!(auth.temp || auth.perm)) {
-                socket.emit('siteUsers', {
-                    type: 'removeUsers',
+                socket.emit('users', {
+                    type: 'removeUser',
+                    goal: 'getAllUsers',
                     name: user.name
                 })
+
+                setUser(anonymous);
+                localStorage.removeItem('token');
+                localStorage.removeItem('roomUrl');
             }
             setUser({...user, auth, name});
-        } else if(type === 'error') {
-            if(message === 'jwt expired') {
-                localStorage.removeItem('token');
-                localStorage.removeItem('romUrl');
-                setUser(anonymous);
-            }
         }
 
     }, [data])
-
-    // useEffect(() => {
-    //     // window.addEventListener(
-    //     //     'onunload', 
-    //     //     socket && socket.emit('siteUsers', {
-    //     //         type: 'removeUsers',
-    //     //         name: user.name
-    //     //     })
-    //     // )
-    //     const f = () => alert(123123213);
-
-    //     window.addEventListener('onbeforeunload', f)
-
-    //     // return () => window.removeEventListener('onbeforeunload', f);
-
-    // }, [])
 
     return {
         ...user,

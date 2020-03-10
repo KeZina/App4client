@@ -56,6 +56,10 @@
                 padding: 1vh 0;
                 cursor: pointer;
             }
+            #empty-list {
+                background-color: inherit;
+                color: $color-s;
+            }
         }
     }
 }

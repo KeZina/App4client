@@ -7,11 +7,13 @@ const useCounter = (data) => {
     useEffect(() => {
         const {type, users} = data;
 
+        console.log(data);
+
         if(type === 'siteUsers') {
             setSiteUsers(users);
         } else if(type === 'roomUsers') {
             setRoomUsers(users);
-        }
+        } 
     }, [data])
 
     return {

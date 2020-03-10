@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { UserContext } from '../context';
+import { UserContext } from '../utils/context';
 
 const Login = () => {
     const initialHandler = {

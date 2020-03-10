@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import Messages from './Messages';
-import { RoomContext, CounterContext, MessageContext } from '../../context';
+import { RoomContext, CounterContext, MessageContext } from '../../utils/context';
 
 const Room = () => {
     const [showUserList, setShowUserList] = useState(false);
@@ -10,8 +10,6 @@ const Room = () => {
     const room = useContext(RoomContext);
     const message = useContext(MessageContext);
     const counter = useContext(CounterContext);
-
-    console.log(counter.roomUsers)
 
     const roomUsers = counter.roomUsers.map(user => {
         return (
@@ -28,6 +26,8 @@ const Room = () => {
             </span>
         )
     })
+
+    // console.log(room)
 
     return (
         <div className = 'container-1'>

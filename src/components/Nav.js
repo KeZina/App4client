@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { UserContext, CounterContext } from '../context';
+import { UserContext, CounterContext } from '../utils/context';
 
 const Nav = () => {
     const user = useContext(UserContext);

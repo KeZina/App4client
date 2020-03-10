@@ -11,14 +11,22 @@ const useMessage = (socket, data) => {
         })
     }
 
-    useEffect(() => {
-        const {type0, type1, content} = data;
+    // const acceptInvite = () => {
 
-        if(type0 === 'notification') {
+    // }
+
+    // const refuseInvite = () => {
+
+    // }
+
+    useEffect(() => {
+        const {type, content} = data;
+
+        if(type === 'inviteToRoom') {
             setNotifications([
                 ...notifications,
                 {
-                    type: type1,
+                    type,
                     content
                 }
             ])
@@ -27,7 +35,9 @@ const useMessage = (socket, data) => {
 
     return {
         notifications,
-        inviteUser
+        inviteUser,
+        // acceptInvite,
+        // refuseInvite
     }
 }
 
