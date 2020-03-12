@@ -4,7 +4,6 @@ import { useHistory } from 'react-router-dom';
 const useRoom = (socket, data, user) => {
     const initialRoom = {
         name: null,
-        messages: [],
         roomList: []
     }
     const [room, setRoom] = useState(initialRoom);
@@ -45,8 +44,8 @@ const useRoom = (socket, data, user) => {
             roomUrl: localStorage.getItem('roomUrl')
         })
 
-        localStorage.removeItem('roomUrl');
         setRoom(initialRoom);
+        localStorage.removeItem('roomUrl');
         history.push('/rooms');
     }
 
@@ -63,11 +62,12 @@ const useRoom = (socket, data, user) => {
 
     // handleResponse
     useEffect(() => {
-        const {type, name, messages, roomUrl, roomList} = data;
+        const {type, name, roomUrl, roomList} = data;
         
         if(type === 'createRoom') {
             setRoom({...room, name});
             localStorage.setItem('roomUrl', roomUrl);
+
             socket.emit('users', {
                 type: 'updateUser',
                 reason: 'enter',
@@ -75,10 +75,13 @@ const useRoom = (socket, data, user) => {
                 name: user,
                 roomUrl: localStorage.getItem('roomUrl')
             })
+
             history.push(`/rooms/${roomUrl}`);
         } else if(type === 'roomList') {
             setRoom({...room, roomList});
         } else if(type === 'enterRoom') {
+            setRoom({...room, name});
+
             socket.emit('users', {
                 type: 'updateUser',
                 reason: 'enter',
@@ -86,7 +89,6 @@ const useRoom = (socket, data, user) => {
                 name: user,
                 roomUrl: localStorage.getItem('roomUrl')
             })
-            setRoom({...room, name, messages});
         }
     }, [data])
 

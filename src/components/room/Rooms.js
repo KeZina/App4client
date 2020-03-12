@@ -6,7 +6,7 @@ const Rooms = () => {
     const [showRoomList, setShowRoomList] = useState(false);
     const room = useContext(RoomContext);
 
-    const list = room.roomList.map((item, index, arr) => {
+    const list = room.roomList.map(item => {
         return (
             <span key = {item._id} onClick = {() => room.enterRoom(item._id)}>
                 {item.name}

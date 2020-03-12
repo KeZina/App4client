@@ -1,12 +1,12 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { UserContext, RoomContext, CounterContext, MessageContext } from '../utils/context';
-import Notification from './Notification';
+import Notification from './message/Notification';
 import Nav from './Nav';
 import Login from './Login';
-import Rooms from './rooms/Rooms';
-import Room from './rooms/Room';
-import CreateRoom from './rooms/CreateRoom';
+import Rooms from './room/Rooms';
+import Room from './room/Room';
+import CreateRoom from './room/CreateRoom';
 import useSocket from '../hooks/useSocket';
 
 const App = () => {

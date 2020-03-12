@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import Messages from './Messages';
+import Messages from '../message/Messages';
 import { RoomContext, CounterContext, MessageContext, UserContext } from '../../utils/context';
 
 const Room = () => {
@@ -10,6 +10,8 @@ const Room = () => {
     const room = useContext(RoomContext);
     const message = useContext(MessageContext);
     const counter = useContext(CounterContext);
+
+    const sendMessage = e => message.sendMessage(e, user.name);
 
     const roomUsers = counter.roomUsers.map(user => {
         return (
@@ -60,7 +62,7 @@ const Room = () => {
                     <div className = 'message-container'>
                         <Messages />
                     </div>
-                    <form>
+                    <form onSubmit = {sendMessage}>
                         <input type = 'submit' value = 'Send message' />
                         <textarea name = 'message'></textarea>
                     </form>

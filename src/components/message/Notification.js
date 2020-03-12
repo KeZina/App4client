@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
-import { MessageContext } from '../utils/context';
+import { MessageContext } from '../../utils/context';
 
 const Notification = () => {
     const [note, setNote] = useState({});
@@ -13,8 +13,8 @@ const Notification = () => {
 
     if(message.notes.length === 0 ) return null;
 
-    const accept = () => message.accept(note.id, note.roomUrl);
-    const refuse = () => message.refuse(note.id);
+    const accept = () => message.acceptInvite(note.id, note.roomUrl);
+    const refuse = () => message.refuseInvite(note.id);
 
     return (
         <div id = 'notification'>
