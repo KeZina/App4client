@@ -1,0 +1,31 @@
+@mixin settings($color-s, $color-m, $color-l) {
+    #settings-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        width: 44vw;
+        min-height: 96vh;
+        margin: auto;
+    }
+    #settings-list {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 10vw;
+        border: .2em solid $color-m;
+        background-color: $color-l;
+        span {
+            color: $color-s;
+            font-size: 1.2em;
+            margin-top: 2vh;
+            border-bottom: .2em solid $color-m;
+            cursor: pointer;
+        }
+    }
+    #settings {
+        width: 30vw;
+        padding: 2vh 1vw;
+        border: .2em solid $color-m;
+        background-color: $color-l;
+    }
+}

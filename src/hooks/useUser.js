@@ -82,8 +82,6 @@ const useUser = (socket, data) => {
     useEffect(() => {
         const {type, auth, name, token} = data;
 
-        console.log(data)
-
         if(type === 'auth') {
             if(token) localStorage.setItem('token', token);
 

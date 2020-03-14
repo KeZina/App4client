@@ -1,0 +1,12 @@
+@mixin profile($color-s, $color-m, $color-l) {
+    #profile {
+        position: relative;
+        top: 5vh;
+        margin: auto;
+        width: 30vw;
+        min-height: 80vh;
+        padding: 1vh 1vw;
+        background-color: $color-l;
+        border: .2em solid $color-m; 
+    }
+}

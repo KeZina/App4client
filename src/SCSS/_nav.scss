@@ -1,4 +1,11 @@
 @mixin nav($color-s, $color-m, $color-l) {
+    %inlines {
+        font: inherit;
+        color: $color-s;
+        font-size: 1.2em;
+        margin: 0;
+        padding: .3em;
+    }
     #navigation {
         position: fixed;
         top: 0;
@@ -9,34 +16,16 @@
         min-height: 4vh;
         padding: 0 2vw;
         background-color: $color-m;
-        border-bottom: 2px solid $color-s;
+        z-index: 2;
         a {
             text-decoration: none;
         }
-        a, button, span{
-            font: inherit;
-            color: $color-s;
-            font-size: 1.2em;
-            margin: 0;
-            padding: 0;
-            padding: .3em;
-        }
-        #right-side {
+        .users-amount {
             display:flex;
             align-items: center;
-            button {
-                padding: .3em;
-                font-size: 1em;
-                color: $color-m;
-                background-color: $color-s;
-                border: none;
-                cursor: pointer;
-                outline: none;
+            a, button, span {
+                @extend %inlines;
             }
-        }
-        #center-side {
-            display:flex;
-            align-items: center;
             div {
                 background-color: $color-s;
                 span {
@@ -44,6 +33,13 @@
                     font-size: 1em;
                     color: $color-m;
                 }
+            }
+        }
+        .user-data {
+            display:flex;
+            align-items: center;
+            .username {
+                @extend %inlines;
             }
         }
     }

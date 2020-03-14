@@ -3,11 +3,11 @@
         position: relative;
         top: 3vh;
         margin: auto;
-        width: 80vw;
+        width: 78vw;
         min-height: 84vh;
         padding: 1vh 1vw;
         background-color: $color-l;
-        border: 2px solid $color-s;
+        border: .2em solid $color-m;
         .sidebar {
             position: absolute;
             top: 0;
@@ -33,14 +33,18 @@
                 flex-direction: column;
                 right: 0;
                 padding: .5vh .5vw;
-                button {
+                button, a {
                     background-color: $color-s;
                     font-size: 1em;
+                    text-align: center;
                     color: $color-l;
                     border: 2px solid $color-l;
                     padding: .8em;
-                    margin-bottom: 2vh;
+                    margin-bottom: 1vh;
                     cursor: pointer;
+                }
+                a {
+                    text-decoration: none;
                 }
             }
         }
@@ -87,8 +91,9 @@
             position: absolute;
             top: 0;
             bottom: 0;
-            right: -8.8vw;
-            padding: .5vh .5vw;
+            right: -9.5vw;
+            padding: 1vh .5vw;
+            border: .2em solid $color-m;
             width: 7.6vw;
             background-color: $color-l;
             overflow: auto;

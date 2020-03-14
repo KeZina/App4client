@@ -49,7 +49,6 @@ const useMessage = (socket, data, enterRoom) => {
                 }
             ])
         } else if (type === 'roomMessages') {
-            console.log(data)
             setRoomMessages(messages);
         }
     }, [data])

@@ -7,6 +7,7 @@ const useRoom = (socket, data, user) => {
         roomList: []
     }
     const [room, setRoom] = useState(initialRoom);
+    const [wasInRoom, setWasInRoom] = useState(null);
     const history = useHistory()
 
     // just creating new room
@@ -31,8 +32,10 @@ const useRoom = (socket, data, user) => {
             type: 'enterRoom',
             roomUrl
         })
-        localStorage.setItem('roomUrl', roomUrl);
-        history.push(`/rooms/${roomUrl}`)
+        if(!localStorage.getItem('roomUrl')) localStorage.setItem('roomUrl', roomUrl);
+
+        history.push(`/rooms/${roomUrl}`);
+        setWasInRoom(`/rooms/${roomUrl}`);
     }
 
     const exitRoom = () => {
@@ -45,20 +48,20 @@ const useRoom = (socket, data, user) => {
         })
 
         setRoom(initialRoom);
+        setWasInRoom(null);
         localStorage.removeItem('roomUrl');
-        history.push('/rooms');
     }
 
     // get room data when user reload page
     useEffect(() => {
         if(socket && localStorage.getItem('roomUrl')) {
-            socket.emit('room', {
-                type: 'enterRoom',
-                roomUrl: localStorage.getItem('roomUrl')
-            })
-            history.push(`/rooms/${localStorage.getItem('roomUrl')}`);
+            if(wasInRoom === `/rooms/${localStorage.getItem('roomUrl')}` && history.location.pathname !== wasInRoom) {
+                exitRoom();
+            } else if(wasInRoom === null) {
+                enterRoom(localStorage.getItem('roomUrl'));
+            }            
         }
-    }, [socket])
+    }, [socket, history.location.pathname])
 
     // handleResponse
     useEffect(() => {

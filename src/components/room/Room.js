@@ -1,15 +1,18 @@
 import React, { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Messages from '../message/Messages';
 import { RoomContext, CounterContext, MessageContext, UserContext } from '../../utils/context';
 
 const Room = () => {
     const [showUserList, setShowUserList] = useState(false);
-    const handleUserList = () => setShowUserList(!showUserList);
 
     const user = useContext(UserContext);
     const room = useContext(RoomContext);
     const message = useContext(MessageContext);
     const counter = useContext(CounterContext);
+
+    const handleUserList = () => setShowUserList(!showUserList);
+    const exitRoom = () => room.exitRoom();
 
     const sendMessage = e => message.sendMessage(e, user.name);
 
@@ -41,9 +44,9 @@ const Room = () => {
                     </div>
                 </div>
                 <div className = 'sidebar right'>
-                    <button onClick = {room.exitRoom}>
+                    <Link to = '/rooms' onClick = {exitRoom}>
                         Exit room
-                    </button>
+                    </Link>
                     <button onClick = {handleUserList}>
                         Invite user
                     </button>

@@ -1,9 +1,12 @@
 @import 'containers';
 @import 'notification';
 @import 'nav';
+@import 'menu';
 @import 'login';
 @import 'rooms';
 @import 'room';
+@import 'profile';
+@import 'settings';
 @import 'message';
 @import 'create-room';
 
@@ -39,9 +42,12 @@ button, a, input {
     @include containers($color-s, $color-m, $color-l);
     @include notification($color-s, $color-m, $color-l);
     @include nav($color-s, $color-m, $color-l);
+    @include menu($color-s, $color-m, $color-l);
     @include login($color-s, $color-m, $color-l);
     @include rooms($color-s, $color-m, $color-l);
     @include room($color-s, $color-m, $color-l);
+    @include profile($color-s, $color-m, $color-l);
+    @include settings($color-s, $color-m, $color-l);
     @include message($color-s, $color-m, $color-l);
     @include create-room($color-s, $color-m, $color-l);
 }
