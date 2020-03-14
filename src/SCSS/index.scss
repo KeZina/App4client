@@ -7,27 +7,9 @@
 @import 'room';
 @import 'profile';
 @import 'settings';
+@import 'theme-model';
 @import 'message';
 @import 'create-room';
-
-$blue-strong: rgb(2, 70, 97);
-$blue-middle: rgb(170, 230, 253);
-$blue-light: rgb(223, 245, 253);
-
-
-
-// $red-strong: rgb(255, 0, 64);
-// $red-middle: rgb(253, 188, 204);
-// $red-light: rgb(253, 221, 229);
-
-// #blue {
-//     @include nav($blue-strong, $blue-middle, $blue-light)
-// }
-// #red {
-//     @include nav($red-strong, $red-middle, $red-light)
-// }
-
-
 
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -52,4 +34,103 @@ button, a, input {
     @include create-room($color-s, $color-m, $color-l);
 }
 
-@include general($blue-strong, $blue-middle, $blue-light)
+// themes
+
+.shy-red {
+    $shy-red-strong: rgb(136, 46, 46);
+    $shy-red-middle: rgb(253, 188, 204);
+    $shy-red-light: rgb(253, 221, 221);
+    @include general($shy-red-strong, $shy-red-middle, $shy-red-light);
+}
+
+.boring-blue {
+    $boring-blue-strong: rgb(2, 70, 97);
+    $boring-blue-middle: rgb(170, 230, 253);
+    $boring-blue-light: rgb(223, 245, 253);
+    @include general($boring-blue-strong, $boring-blue-middle, $boring-blue-light);
+}
+
+.grass-green {
+    $grass-green-strong: rgb(52, 102, 44);
+    $grass-green-middle: rgb(182, 255, 173);
+    $grass-green-light: rgb(228, 255, 225);
+    @include general($grass-green-strong, $grass-green-middle, $grass-green-light);
+}
+
+.sexy-red {
+    $sexy-red-strong: rgb(37, 0, 0);
+    $sexy-red-middle: rgb(255, 49, 49);
+    $sexy-red-light: rgb(180, 86, 86);
+    @include general($sexy-red-strong, $sexy-red-middle, $sexy-red-light);
+}
+
+.cosmic-blue {
+    $cosmic-blue-strong: rgb(21, 0, 39);
+    $cosmic-blue-middle: rgb(0, 225, 255);
+    $cosmic-blue-light: rgb(7, 156, 255);
+    @include general($cosmic-blue-strong, $cosmic-blue-middle, $cosmic-blue-light);
+}
+
+.jungle-green {
+    $jungle-green-strong: rgb(8, 22, 0);
+    $jungle-green-middle: rgb(157, 255, 0);
+    $jungle-green-light: rgb(35, 175, 0);
+    @include general($jungle-green-strong, $jungle-green-middle, $jungle-green-light);
+}
+
+// models themes
+
+.model {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+    div {
+        cursor: pointer;
+        span {
+            display: block;
+        }
+    }
+}
+
+.shy-red-model {
+    $shy-red-strong: rgb(136, 46, 46);
+    $shy-red-middle: rgb(253, 188, 204);
+    $shy-red-light: rgb(253, 221, 221);
+    @include theme-model($shy-red-strong, $shy-red-middle, $shy-red-light)
+}
+
+.boring-blue-model {
+    $boring-blue-strong: rgb(2, 70, 97);
+    $boring-blue-middle: rgb(170, 230, 253);
+    $boring-blue-light: rgb(223, 245, 253);
+    @include theme-model($boring-blue-strong, $boring-blue-middle, $boring-blue-light);
+}
+
+.grass-green-model {
+    $grass-green-strong: rgb(52, 102, 44);
+    $grass-green-middle: rgb(182, 255, 173);
+    $grass-green-light: rgb(211, 255, 206);
+    @include theme-model($grass-green-strong, $grass-green-middle, $grass-green-light);
+}
+
+.sexy-red-model {
+    $sexy-red-strong: rgb(37, 0, 0);
+    $sexy-red-middle: rgb(255, 49, 49);
+    $sexy-red-light: rgb(180, 86, 86);
+    @include theme-model($sexy-red-strong, $sexy-red-middle, $sexy-red-light);
+}
+
+.cosmic-blue-model {
+    $cosmic-blue-strong: rgb(21, 0, 39);
+    $cosmic-blue-middle: rgb(0, 225, 255);
+    $cosmic-blue-light: rgb(7, 156, 255);
+    @include theme-model($cosmic-blue-strong, $cosmic-blue-middle, $cosmic-blue-light);
+}
+
+.jungle-green-model {
+    $jungle-green-strong: rgb(8, 22, 0);
+    $jungle-green-middle: rgb(157, 255, 0);
+    $jungle-green-light: rgb(35, 175, 0);
+    @include theme-model($jungle-green-strong, $jungle-green-middle, $jungle-green-light);
+}

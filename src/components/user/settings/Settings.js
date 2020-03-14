@@ -1,7 +1,17 @@
 import React, { useState } from 'react';
+import ThemeSetting from './ThemeSetting';
+import ProfileSetting from './ProfileSetting';
 
 const Settings = () => {
     const [setting, setSetting] = useState('theme');
+
+    const visibleSetting = () => {
+        if(setting === 'theme') {
+            return <ThemeSetting />
+        } else if(setting === 'profile') {
+            return <ProfileSetting />
+        }
+    }
 
     return (
         <div className = 'container-1'>
@@ -15,7 +25,7 @@ const Settings = () => {
                     </span>
                 </div>
                 <div id = 'settings'>
-
+                    {visibleSetting()}
                 </div> 
             </div>
         </div>

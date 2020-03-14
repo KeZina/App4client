@@ -2,6 +2,7 @@
     #menu-indicator {
         padding: 0 .1em;
         font-size: 1.6em;
+        color: $color-s;
         cursor: pointer;
         transition-duration: .5s;
         &:hover {

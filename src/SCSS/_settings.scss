@@ -1,18 +1,18 @@
 @mixin settings($color-s, $color-m, $color-l) {
     #settings-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: stretch;
         width: 44vw;
-        min-height: 96vh;
         margin: auto;
     }
     #settings-list {
+        position: fixed;
+        top: 4vh;
+        bottom:0;
         display: flex;
         flex-direction: column;
         text-align: center;
         width: 10vw;
-        border: .2em solid $color-m;
+        border-left: .2em solid $color-m;
+        border-right: .2em solid $color-m;
         background-color: $color-l;
         span {
             color: $color-s;
@@ -23,9 +23,19 @@
         }
     }
     #settings {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: $color-s;
         width: 30vw;
+        min-height: 92vh;
         padding: 2vh 1vw;
-        border: .2em solid $color-m;
+        margin-left: 12vw;
+        border-left: .2em solid $color-m;
+        border-right: .2em solid $color-m;
         background-color: $color-l;
+        .model-container {
+            margin-bottom: 8vh;
+        }
     }
 }

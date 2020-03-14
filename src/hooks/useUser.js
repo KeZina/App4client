@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 const useUser = (socket, data) => {
     const anonymous = {
         name: null,
+        theme: 'boring-blue',
         auth: {
             temp: false,
             perm: false
@@ -60,6 +61,19 @@ const useUser = (socket, data) => {
             token: localStorage.getItem('token')
         })
         localStorage.removeItem('token');
+        localStorage.removeItem('roomUrl');
+
+        setUser(anonymous);
+    }
+
+    const setTheme = theme => {
+        socket.emit('user', {
+            type: 'setTheme',
+            name: user.name,
+            theme
+        })
+
+        setUser({...user, theme});
     }
 
     // redirect no-auth user
@@ -68,7 +82,7 @@ const useUser = (socket, data) => {
         else if(localStorage.getItem('token') && history.location.pathname === '/') history.push('/rooms');
     }, [localStorage.getItem('token'), history.location.pathname])
 
-    // check if user auth
+    // check if user have token
     useEffect(() => {
         if(socket && localStorage.getItem('token')) {
             socket.emit('user', {
@@ -80,7 +94,7 @@ const useUser = (socket, data) => {
     
     // handle responses
     useEffect(() => {
-        const {type, auth, name, token} = data;
+        const {type, auth, name, theme, token} = data;
 
         if(type === 'auth') {
             if(token) localStorage.setItem('token', token);
@@ -102,7 +116,9 @@ const useUser = (socket, data) => {
                 localStorage.removeItem('token');
                 localStorage.removeItem('roomUrl');
             }
-            setUser({...user, auth, name});
+            setUser({...user, auth, name, theme: theme || user.theme});
+        } else if(type === 'theme') {
+            setUser({...user, theme});
         }
 
     }, [data])
@@ -112,7 +128,8 @@ const useUser = (socket, data) => {
         createPermAcc,
         createTempAcc,
         login,
-        logout
+        logout,
+        setTheme
     }
 }
 
