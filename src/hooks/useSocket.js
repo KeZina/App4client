@@ -5,7 +5,7 @@ import useRoom from './useRoom';
 import useMessage from './useMessage';
 import useCounter from './useCounter';
 
-const useWebSocket = () => {
+const useSocket = () => {
     const [socket, setSocket] = useState();
  
     const [userData, setUserData] = useState({});
@@ -29,8 +29,8 @@ const useWebSocket = () => {
 
     const user = useUser(socket, userData);
     const room = useRoom(socket, roomData, user.name);
-    const message = useMessage(socket, messageData, room.enterRoom);
-    const counter = useCounter(counterData);
+    const message = useMessage(socket, messageData, room.enterRoom, user.name);
+    const counter = useCounter(socket, counterData);
 
     return {
         socket,
@@ -41,4 +41,4 @@ const useWebSocket = () => {
     }
 }
 
-export default useWebSocket;
+export default useSocket;

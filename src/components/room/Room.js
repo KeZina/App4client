@@ -1,20 +1,17 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Messages from '../message/Messages';
-import { RoomContext, CounterContext, MessageContext, UserContext } from '../../utils/context';
+import { RoomContext, CounterContext, MessageContext } from '../../utils/context';
 
 const Room = () => {
     const [showUserList, setShowUserList] = useState(false);
 
-    const user = useContext(UserContext);
     const room = useContext(RoomContext);
     const message = useContext(MessageContext);
     const counter = useContext(CounterContext);
 
     const handleUserList = () => setShowUserList(!showUserList);
     const exitRoom = () => room.exitRoom();
-
-    const sendMessage = e => message.sendMessage(e, user.name);
 
     const roomUsers = counter.roomUsers.map(user => {
         return (
@@ -26,7 +23,7 @@ const Room = () => {
 
     const siteUsers = counter.siteUsers.map(siteUser => {
         return (
-            <span key = {siteUser} onClick = {() => message.inviteUser(siteUser, user.name, room.name)}>
+            <span key = {siteUser} onClick = {() => message.inviteToRoom(siteUser, room.name)}>
                 {siteUser}
             </span>
         )
@@ -63,9 +60,9 @@ const Room = () => {
                 <h2>{room.name}</h2>
                 <div className = 'chat'>
                     <div className = 'message-container'>
-                        <Messages />
+                        <Messages message = {message} />
                     </div>
-                    <form onSubmit = {sendMessage}>
+                    <form onSubmit = {message.sendRoomMessage}>
                         <input type = 'submit' value = 'Send message' />
                         <textarea name = 'message'></textarea>
                     </form>

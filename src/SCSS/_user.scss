@@ -1,0 +1,25 @@
+@mixin user($color-s, $color-m, $color-l) {
+    #user {
+        display: flex;
+        justify-content: space-between;
+        min-height: 8vh;
+        padding: 1vh 1vw;
+        margin-bottom: 3vh;
+        color: $color-s;
+        background-color: $color-m;
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            button {
+                background-color: $color-s;
+                    font-size: 1em;
+                    text-align: center;
+                    color: $color-l;
+                    border: .1em solid $color-l;
+                    padding: .4em;
+                    cursor: pointer;
+            }
+        }
+    }
+}

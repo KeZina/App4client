@@ -1,54 +1,79 @@
 import { useState, useEffect } from 'react';
 
-const useMessage = (socket, data, enterRoom) => {
+const useMessage = (socket, data, enterRoom, currentUser) => {
     const [roomMessages, setRoomMessages] = useState([]);
     const [notes, setNotes] = useState([]);
 
-    const inviteUser = (name, sender, room) => {
+    const inviteToRoom = (targetUser, room) => {
         socket.emit('message', {
-            type: 'inviteUser',
-            name,
-            sender,
+            type: 'inviteToRoom',
+            currentUser,
+            targetUser,
             room
         })
     }
 
-    const acceptInvite = (id, roomUrl) => {
-        const filteredNotes = notes.filter(note => note.id !== id);
-        setNotes(filteredNotes);
-        enterRoom(roomUrl);
+    const inviteToFriends = targetUser => {
+        socket.emit('message', {
+            type: 'inviteToFriends',
+            currentUser,
+            targetUser
+        })
+    }
+
+    const addToFriends = (currentUser, targetUser) => {
+        socket.emit('message', {
+            type: 'inviteToFriends',
+            currentUser,
+            targetUser,
+            result: 'accept'
+        })
+    }
+
+    const acceptInvite = note => {
+        if(note.type1 === 'inviteToRoom') {
+            const filteredNotes = notes.filter(item => item.id !== note.id);
+            setNotes(filteredNotes);
+            enterRoom(note.roomUrl);
+        } else if(note.type1 === 'inviteToFriends') {
+            const filteredNotes = notes.filter(item => item.id !== note.id);
+            setNotes(filteredNotes);
+            addToFriends(note.currentUser, note.targetUser);
+        }
     }  
 
-    const refuseInvite = id => {
-        const filteredNotes = notes.filter(note => note.id !== id);
+    const refuseInvite = note => {
+        const filteredNotes = notes.filter(item => item.id !== note.id);
         setNotes(filteredNotes);
     }
 
-    const sendMessage = (e, sender) => {
+    const sendRoomMessage = e => {
         e.preventDefault();
 
         socket.emit('message', {
-            type: 'createMessage',
+            type: 'createRoomMessage',
             content: e.target.message.value,
-            sender,
+            currentUser,
             roomUrl: localStorage.getItem('roomUrl')
         })
     }
 
     useEffect(() => {
-        const {type, content, roomUrl, messages} = data;
+        const {type0, type1, content, currentUser, targetUser, roomUrl, messages} = data;
 
-        if(type === 'note') {
+        if(type0 === 'note') {
             setNotes([
                 ...notes,
                 {
-                    type,
+                    type1,
                     content,
+                    currentUser,
+                    targetUser,
                     roomUrl,
                     id: Math.floor(Math.random() * 1e10)
                 }
             ])
-        } else if (type === 'roomMessages') {
+        } else if (type0 === 'roomMessages') {
             setRoomMessages(messages);
         }
     }, [data])
@@ -56,10 +81,11 @@ const useMessage = (socket, data, enterRoom) => {
     return {
         notes,
         roomMessages,
-        inviteUser,
+        inviteToRoom,
+        inviteToFriends,
         acceptInvite,
         refuseInvite,
-        sendMessage
+        sendRoomMessage
     }
 }
 

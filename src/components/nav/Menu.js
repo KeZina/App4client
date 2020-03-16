@@ -23,17 +23,25 @@ const Menu = () => {
             </span>
             <div ref = {menu} className = 'menu'>
                 <div className = 'general-list'>
-                    <Link to = '/users'>
+                    <Link to = '/users-list'>
                         Users
                     </Link>
                     <Link to = '/rooms'>
                         Rooms
                     </Link> 
                 </div>
-                <div className = 'private-list'>
-                    <Link to = '/profile'>
-                        Profile
+                <div className = 'user-data-list'>
+                    <Link to = '/profile/messages'>
+                        My messages
                     </Link>
+                    <Link to = '/profile/friends'>
+                        My friends
+                    </Link>
+                    <Link to = '/profile/favorite-rooms'>
+                        My favorite rooms
+                    </Link>
+                </div>
+                <div className = 'private-list'>
                     <Link to = '/settings'>
                         Settings
                     </Link>

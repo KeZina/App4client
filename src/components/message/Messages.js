@@ -1,9 +1,6 @@
-import React, { useContext } from 'react';
-import { MessageContext } from '../../utils/context';
+import React from 'react';
 
-const Messages = () => {
-    const message = useContext(MessageContext);
-
+const Messages = ({message}) => {
     if(message.roomMessages.length === 0) {
         return null;
     } else {

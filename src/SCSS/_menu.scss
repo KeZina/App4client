@@ -30,11 +30,21 @@
             flex-direction: column;
         }
         .general-list {
-            a{
+            a {
                 color: $color-s;
                 font-size: 1.2em;
-                margin-top: 2vh;
+                padding: 1vh 1.5vw 0;
                 border-bottom: .2em solid $color-m;
+                cursor: pointer;
+            }
+        }
+        .user-data-list {
+            a {
+                color: $color-s;
+                background-color: $color-m;
+                font-size: 1.2em;
+                margin: .5vh .2vw;
+                padding: .5vh 1.5vw;
                 cursor: pointer;
             }
         }
@@ -45,9 +55,8 @@
                 color: $color-l;
                 background: $color-s;
                 border: none;
-                border-right: .2em solid $color-l;
-                border-left: .2em solid $color-l;
-                padding: .3em;
+                margin: .5vh .2vw;
+                padding: .5vh 1.5vw;
                 cursor: pointer;
             }
         }
