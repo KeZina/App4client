@@ -8,6 +8,9 @@
         padding: 1vh 1vw;
         background-color: $color-l;
         border: .2em solid $color-m;
+        h2 {
+            color:$color-s;
+        }
         .sidebar {
             position: absolute;
             top: 0;
@@ -16,6 +19,9 @@
             &.left {
                 left: .5vw;
                 text-align: center;
+                h3 {
+                    color: $color-s;
+                }
                 div {
                     display: flex;
                     flex-direction: column;
@@ -38,13 +44,17 @@
                     font-size: 1em;
                     text-align: center;
                     color: $color-l;
-                    border: 2px solid $color-l;
+                    border-top: .2em solid $color-s;
+                    border-bottom: .2em solid $color-s;
                     padding: .8em;
                     margin-bottom: 1vh;
                     cursor: pointer;
-                }
-                a {
-                    text-decoration: none;
+                    transition-duration: .5s;
+                    &:hover {
+                        background-color: $color-m;
+                        color: $color-s;
+                        border-color: $color-s;
+                    }
                 }
             }
         }
@@ -73,8 +83,15 @@
                     font-size: 1em;
                     color: $color-l;
                     padding: .8em;
-                    border: none;
+                    border-top: .2em solid $color-s;
+                    border-bottom: .2em solid $color-s;
                     cursor: pointer;
+                    transition-duration: .5s;
+                    &:hover {
+                        background-color: $color-m;
+                        color: $color-s;
+                        border-color: $color-s;
+                    }
                 }
                 textarea {
                     height: 100%;
@@ -83,8 +100,7 @@
                     font-weight: 600;
                     padding: 1vh 1vw;
                     background-color: $color-m;
-                    border: 2px solid $color-s;
-                    outline: none;
+                    border-bottom: .2em solid $color-s;
                 }
             }
         }
@@ -103,9 +119,8 @@
                 margin: 0;
                 margin-bottom: 3vh;
             }
-            span {
+            button {
                 display: block;
-                border: none;
                 margin-bottom: 1vh;
                 background-color: $color-s;
                 text-align: center;
@@ -113,8 +128,15 @@
                 color: $color-l;
                 width: 100%;
                 padding: 1vh 0;
-                text-decoration: none;
+                border-top: .2em solid $color-s;
+                border-bottom: .2em solid $color-s;
                 cursor: pointer;
+                transition-duration: .5s;
+                &:hover {
+                    background-color: $color-m;
+                    color: $color-s;
+                    border-color: $color-s;
+                }
             }
             :last-child {
                 margin: 0;

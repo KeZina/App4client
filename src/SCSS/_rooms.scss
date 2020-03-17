@@ -7,10 +7,12 @@
         padding: 1.3vh 1.3vw;
         color: $color-s;
         background-color: $color-m;
-        border: 2px solid $color-s;
-        transition-duration: .2s;
-        text-decoration: none;
+        transition-duration: .5s;
         cursor: pointer;
+        &:hover {
+            color: $color-m;
+            background-color: $color-s;
+        }
     }
     #rooms {
         position: relative;
@@ -23,18 +25,12 @@
         border: .2em solid $color-m;
         .buttons-container {
             min-height: inherit;
-            display:flex;
+            display: flex;
             flex-direction: column;
             justify-content: space-between;
             
             button, a {
                 @extend %buttons;
-            }
-            a:hover {
-                background-color: rgb(97, 255, 150);
-            }
-            button:hover {
-                background-color: rgb(244, 252, 133);
             }
         }
         .room-list {
@@ -55,7 +51,15 @@
                 color: $color-l;
                 width: 100%;
                 padding: 1vh 0;
+                border-top: .2em solid $color-s;
+                border-bottom: .2em solid $color-s;
                 cursor: pointer;
+                transition-duration: .5s;
+                &:hover {
+                    background-color: $color-m;
+                    color: $color-s;
+                    border-color: $color-s;
+                }
             }
             #empty-list {
                 background-color: inherit;

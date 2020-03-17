@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ThemeSetting from './ThemeSetting';
 import ProfileSetting from './ProfileSetting';
 
-const Settings = () => {
+const MySettings = () => {
     const [setting, setSetting] = useState('theme');
 
     const visibleSetting = () => {
@@ -32,4 +32,4 @@ const Settings = () => {
     )
 }
 
-export default Settings;
+export default MySettings;

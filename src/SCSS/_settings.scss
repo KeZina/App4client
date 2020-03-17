@@ -13,13 +13,19 @@
         width: 10vw;
         border-left: .2em solid $color-m;
         border-right: .2em solid $color-m;
+        padding: 4vh 0;
         background-color: $color-l;
         span {
             color: $color-s;
             font-size: 1.2em;
-            margin-top: 2vh;
+            padding: 1vh 1.5vw 0;
             border-bottom: .2em solid $color-m;
             cursor: pointer;
+            transition-duration: .5s;
+            &:hover {
+                background-color: $color-m;
+                border-color: $color-s;
+            }
         }
     }
     #settings {

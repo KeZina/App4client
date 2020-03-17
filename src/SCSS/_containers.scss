@@ -2,16 +2,16 @@
     .container-1 {
         background-color: $color-s;
         width: 98vw;
-        min-height: 96vh;
-        padding: 4vh 1vw 0 1vw;
+        min-height: 96.1vh;
+        padding: 3.9vh 1vw 0 1vw;
         overflow: hidden;
     }
     .container-2 {
         display: flex;
         flex-direction: column;
         width: 40vw;
-        height: 84vh;
-        padding: 6vh 1vw;
+        height: 80vh;
+        padding: 8vh 1vw;
         border-left: .2em solid $color-m;
         border-right: .2em solid $color-m;
         margin: auto;

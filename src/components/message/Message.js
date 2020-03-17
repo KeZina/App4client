@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Messages = ({message}) => {
-    if(message.roomMessages.length === 0) {
+const RoomMessages = ({message}) => {
+    if(message.length === 0) {
         return null;
     } else {
-        return message.roomMessages.map(message => {
+        return message.map(message => {
             return (
                 <div className = 'message' key = {Math.round(Math.random() * 1e5)}>
                     <span>Send by: {message.sender}</span>
@@ -18,4 +18,4 @@ const Messages = ({message}) => {
     }
 }
 
-export default Messages;
+export default RoomMessages;

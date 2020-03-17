@@ -13,13 +13,10 @@
         justify-content: space-between;
         align-items: center;
         width: 96vw;
-        min-height: 4vh;
+        min-height: 2.4em;
         padding: 0 2vw;
         background-color: $color-m;
         z-index: 2;
-        a {
-            text-decoration: none;
-        }
         .users-amount {
             display:flex;
             align-items: center;

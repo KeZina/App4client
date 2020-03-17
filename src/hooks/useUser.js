@@ -60,6 +60,11 @@ const useUser = (socket, data) => {
             type: 'logout',
             token: localStorage.getItem('token')
         })
+        socket.emit('users', {
+            type: 'removeUser',
+            goal: 'getAllUsers',
+            name: user.name
+        })
         localStorage.removeItem('token');
         localStorage.removeItem('roomUrl');
 

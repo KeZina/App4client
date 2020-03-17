@@ -1,9 +1,9 @@
-@mixin user($color-s, $color-m, $color-l) {
-    .user-in-list {
+@mixin friend($color-s, $color-m, $color-l) {
+    .user-in-friends {
         display: flex;
         justify-content: space-between;
-        min-height: 10vh;
-        padding: 1vh 1vw;
+        min-height: 6vh;
+        padding: 1.5vh 1vw;
         margin-bottom: 3vh;
         color: $color-s;
         background-color: $color-m;
@@ -16,7 +16,6 @@
                 font-size: 1em;
                 text-align: center;
                 color: $color-m;
-                padding: .5vh 1.5vw;
                 border-top: .2em solid $color-s;
                 border-bottom: .2em solid $color-s;
                 cursor: pointer;

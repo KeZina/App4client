@@ -1,0 +1,5199 @@
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+button, a, input, textarea {
+  border: none;
+  text-decoration: none;
+  outline: none;
+}
+
+.shy-red .container-1 {
+  background-color: #882e2e;
+  width: 98vw;
+  min-height: 96.1vh;
+  padding: 3.9vh 1vw 0 1vw;
+  overflow: hidden;
+}
+
+.shy-red .container-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40vw;
+  height: 80vh;
+  padding: 8vh 1vw;
+  border-left: 0.2em solid #fdbccc;
+  border-right: 0.2em solid #fdbccc;
+  margin: auto;
+  background-color: #fddddd;
+}
+
+.shy-red #notification {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(136, 46, 46, 0.8);
+  z-index: 1;
+}
+
+.shy-red #notification .notification-container {
+  position: relative;
+  top: 20vh;
+  margin: auto;
+  width: 14vw;
+  min-height: 12vh;
+  padding: 1vh 1vw;
+  background-color: #fddddd;
+  border: 2px solid #882e2e;
+}
+
+.shy-red #notification .notification-container h3 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 3vh;
+}
+
+.shy-red #notification .buttons-deciders {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.shy-red #notification .buttons-deciders button {
+  font: inherit;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 1vh 1vw;
+  color: #882e2e;
+  background-color: #fdbccc;
+  border: 2px solid #882e2e;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  cursor: pointer;
+}
+
+.shy-red #notification .buttons-deciders :nth-child(1):hover {
+  background-color: #61ff96;
+}
+
+.shy-red #notification .buttons-deciders :nth-child(2):hover {
+  background-color: #f4fc85;
+}
+
+.shy-red #navigation .users-amount a, .shy-red #navigation .users-amount button, .shy-red #navigation .users-amount span, .shy-red #navigation .user-data .username, .boring-blue #navigation .users-amount .shy-red a, .boring-blue #navigation .users-amount .shy-red button, .boring-blue #navigation .users-amount .shy-red span, .boring-blue #navigation .user-data .shy-red .username, .grass-green #navigation .users-amount .shy-red a, .grass-green #navigation .users-amount .shy-red button, .grass-green #navigation .users-amount .shy-red span, .grass-green #navigation .user-data .shy-red .username, .sexy-red #navigation .users-amount .shy-red a, .sexy-red #navigation .users-amount .shy-red button, .sexy-red #navigation .users-amount .shy-red span, .sexy-red #navigation .user-data .shy-red .username, .cosmic-blue #navigation .users-amount .shy-red a, .cosmic-blue #navigation .users-amount .shy-red button, .cosmic-blue #navigation .users-amount .shy-red span, .cosmic-blue #navigation .user-data .shy-red .username, .jungle-green #navigation .users-amount .shy-red a, .jungle-green #navigation .users-amount .shy-red button, .jungle-green #navigation .users-amount .shy-red span, .jungle-green #navigation .user-data .shy-red .username {
+  font: inherit;
+  color: #882e2e;
+  font-size: 1.2em;
+  margin: 0;
+  padding: .3em;
+}
+
+.shy-red #navigation {
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 96vw;
+  min-height: 2.4em;
+  padding: 0 2vw;
+  background-color: #fdbccc;
+  z-index: 2;
+}
+
+.shy-red #navigation .users-amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shy-red #navigation .users-amount div {
+  background-color: #882e2e;
+}
+
+.shy-red #navigation .users-amount div span {
+  display: inline-block;
+  font-size: 1em;
+  color: #fdbccc;
+}
+
+.shy-red #navigation .user-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shy-red #menu-indicator {
+  padding: 0 .1em;
+  font-size: 1.6em;
+  color: #882e2e;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.shy-red #menu-indicator:hover {
+  background-color: #882e2e;
+  color: #fdbccc;
+}
+
+.shy-red .menu {
+  position: fixed;
+  top: 2.4em;
+  right: -8vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 8vw;
+  height: 88vh;
+  padding: 4vh 0;
+  border-left: 0.2em solid #fdbccc;
+  background-color: #fddddd;
+  text-align: center;
+  z-index: 10;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.shy-red .menu div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.shy-red .menu .general-list a {
+  color: #882e2e;
+  font-size: 1.2em;
+  padding: 1vh 1.5vw 0;
+  border-bottom: 0.2em solid #fdbccc;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.shy-red .menu .general-list a:hover {
+  background-color: #fdbccc;
+  border-color: #882e2e;
+}
+
+.shy-red .menu .user-data-list a {
+  color: #882e2e;
+  background-color: #fdbccc;
+  font-size: 1.2em;
+  margin: .5vh .2vw;
+  padding: .5vh 1.5vw;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.shy-red .menu .user-data-list a:hover {
+  color: #fdbccc;
+  background-color: #882e2e;
+}
+
+.shy-red .menu .private-list a, .shy-red .menu .private-list button {
+  font-size: 1.2em;
+  margin-top: 1vh;
+  color: #fddddd;
+  background: #882e2e;
+  border-top: 0.2em solid #882e2e;
+  border-bottom: 0.2em solid #882e2e;
+  margin: .5vh .2vw;
+  padding: .5vh 1.5vw;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.shy-red .menu .private-list a:hover, .shy-red .menu .private-list button:hover {
+  background-color: #fddddd;
+  color: #882e2e;
+  border-color: #882e2e;
+}
+
+.shy-red .visible {
+  right: 0vw;
+}
+
+.shy-red #login {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(136, 46, 46, 0.8);
+}
+
+.shy-red #login div {
+  position: relative;
+  top: 15vh;
+  margin: auto;
+  width: 14vw;
+  min-height: 40vh;
+  padding: 1vh 1vw;
+  background-color: #fddddd;
+  border: 2px solid #882e2e;
+}
+
+.shy-red #login div h2 {
+  min-height: 6vh;
+  margin: 0;
+  text-align: center;
+  border-bottom: 2px solid #882e2e;
+}
+
+.shy-red #login div h4 {
+  color: #882e2e;
+  margin: 0vh;
+  margin-bottom: 1vh;
+}
+
+.shy-red #login div h4 span {
+  color: black;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}
+
+.shy-red #login div form {
+  margin-top: 5vh;
+}
+
+.shy-red #login div label h3 {
+  text-align: center;
+  margin: 0;
+  padding: 1vh 0;
+}
+
+.shy-red #login div label input {
+  display: block;
+  width: 100%;
+  height: 2.5vh;
+  margin: auto;
+  border: 2px solid #882e2e;
+}
+
+.shy-red #login div input[type="submit"] {
+  display: block;
+  margin: auto;
+  margin-top: 3vh;
+  width: 3vw;
+  height: 6vh;
+  font-size: 2em;
+  color: #882e2e;
+  background-color: #fdbccc;
+  border: 2px solid #882e2e;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  cursor: pointer;
+}
+
+.shy-red #login div input[type="submit"]:hover {
+  color: initial;
+}
+
+.shy-red .user-in-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 10vh;
+  padding: 1vh 1vw;
+  margin-bottom: 3vh;
+  color: #882e2e;
+  background-color: #fdbccc;
+}
+
+.shy-red .user-in-list div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.shy-red .user-in-list div button {
+  background-color: #882e2e;
+  font-size: 1em;
+  text-align: center;
+  color: #fdbccc;
+  padding: .5vh 1.5vw;
+  border-top: 0.2em solid #882e2e;
+  border-bottom: 0.2em solid #882e2e;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.shy-red .user-in-list div button:hover {
+  background-color: #fdbccc;
+  color: #882e2e;
+  border-color: #882e2e;
+}
+
+.shy-red #rooms .buttons-container button, .shy-red #rooms .buttons-container a, .boring-blue #rooms .buttons-container .shy-red button, .boring-blue #rooms .buttons-container .shy-red a, .grass-green #rooms .buttons-container .shy-red button, .grass-green #rooms .buttons-container .shy-red a, .sexy-red #rooms .buttons-container .shy-red button, .sexy-red #rooms .buttons-container .shy-red a, .cosmic-blue #rooms .buttons-container .shy-red button, .cosmic-blue #rooms .buttons-container .shy-red a, .jungle-green #rooms .buttons-container .shy-red button, .jungle-green #rooms .buttons-container .shy-red a {
+  display: inline-block;
+  font: inherit;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 1.3vh 1.3vw;
+  color: #882e2e;
+  background-color: #fdbccc;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  cursor: pointer;
+}
+
+.shy-red #rooms .buttons-container button:hover, .shy-red #rooms .buttons-container a:hover, .boring-blue #rooms .buttons-container .shy-red button:hover, .boring-blue #rooms .buttons-container .shy-red a:hover, .grass-green #rooms .buttons-container .shy-red button:hover, .grass-green #rooms .buttons-container .shy-red a:hover, .sexy-red #rooms .buttons-container .shy-red button:hover, .sexy-red #rooms .buttons-container .shy-red a:hover, .cosmic-blue #rooms .buttons-container .shy-red button:hover, .cosmic-blue #rooms .buttons-container .shy-red a:hover, .jungle-green #rooms .buttons-container .shy-red button:hover, .jungle-green #rooms .buttons-container .shy-red a:hover {
+  color: #fdbccc;
+  background-color: #882e2e;
+}
+
+.shy-red #rooms {
+  position: relative;
+  top: 20vh;
+  margin: auto;
+  width: 20vw;
+  min-height: 15vh;
+  padding: 1vh 1vw;
+  background-color: #fddddd;
+  border: 0.2em solid #fdbccc;
+}
+
+.shy-red #rooms .buttons-container {
+  min-height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.shy-red #rooms .room-list {
+  position: absolute;
+  top: -.2em;
+  bottom: -.2em;
+  right: -11vw;
+  width: 10vw;
+  background-color: #fddddd;
+  border: 0.2em solid #fdbccc;
+  overflow: auto;
+}
+
+.shy-red #rooms .room-list span {
+  display: block;
+  margin-top: .3vh;
+  background-color: #882e2e;
+  text-align: center;
+  font-size: 1em;
+  color: #fddddd;
+  width: 100%;
+  padding: 1vh 0;
+  border-top: 0.2em solid #882e2e;
+  border-bottom: 0.2em solid #882e2e;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.shy-red #rooms .room-list span:hover {
+  background-color: #fdbccc;
+  color: #882e2e;
+  border-color: #882e2e;
+}
+
+.shy-red #rooms .room-list #empty-list {
+  background-color: inherit;
+  color: #882e2e;
+}
+
+.shy-red #room {
+  position: relative;
+  top: 3vh;
+  margin: auto;
+  width: 78vw;
+  min-height: 84vh;
+  padding: 1vh 1vw;
+  background-color: #fddddd;
+  border: 0.2em solid #fdbccc;
+}
+
+.shy-red #room h2 {
+  color: #882e2e;
+}
+
+.shy-red #room .sidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10vw;
+}
+
+.shy-red #room .sidebar.left {
+  left: .5vw;
+  text-align: center;
+}
+
+.shy-red #room .sidebar.left h3 {
+  color: #882e2e;
+}
+
+.shy-red #room .sidebar.left div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 3vh;
+}
+
+.shy-red #room .sidebar.left div span {
+  background-color: #fdbccc;
+  color: #882e2e;
+  padding: .5vh .2vw;
+  margin-bottom: 1vw;
+}
+
+.shy-red #room .sidebar.right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  right: 0;
+  padding: .5vh .5vw;
+}
+
+.shy-red #room .sidebar.right button, .shy-red #room .sidebar.right a {
+  background-color: #882e2e;
+  font-size: 1em;
+  text-align: center;
+  color: #fddddd;
+  border-top: 0.2em solid #882e2e;
+  border-bottom: 0.2em solid #882e2e;
+  padding: .8em;
+  margin-bottom: 1vh;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.shy-red #room .sidebar.right button:hover, .shy-red #room .sidebar.right a:hover {
+  background-color: #fdbccc;
+  color: #882e2e;
+  border-color: #882e2e;
+}
+
+.shy-red #room h2 {
+  text-align: center;
+  margin: 0 10vw;
+}
+
+.shy-red #room .chat {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  left: 11vw;
+  right: 11vw;
+  top: 5vh;
+  bottom: 2vh;
+}
+
+.shy-red #room .chat .message-container {
+  height: 100%;
+  overflow: auto;
+}
+
+.shy-red #room .chat form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 25vh;
+}
+
+.shy-red #room .chat form input {
+  background-color: #882e2e;
+  font-size: 1em;
+  color: #fddddd;
+  padding: .8em;
+  border-top: 0.2em solid #882e2e;
+  border-bottom: 0.2em solid #882e2e;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.shy-red #room .chat form input:hover {
+  background-color: #fdbccc;
+  color: #882e2e;
+  border-color: #882e2e;
+}
+
+.shy-red #room .chat form textarea {
+  height: 100%;
+  resize: none;
+  font-size: 1.4em;
+  font-weight: 600;
+  padding: 1vh 1vw;
+  background-color: #fdbccc;
+  border-bottom: 0.2em solid #882e2e;
+}
+
+.shy-red #room .user-list {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -9.5vw;
+  padding: 1vh .5vw;
+  border: 0.2em solid #fdbccc;
+  width: 7.6vw;
+  background-color: #fddddd;
+  overflow: auto;
+}
+
+.shy-red #room .user-list h3 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 3vh;
+}
+
+.shy-red #room .user-list button {
+  display: block;
+  margin-bottom: 1vh;
+  background-color: #882e2e;
+  text-align: center;
+  font-size: 1em;
+  color: #fddddd;
+  width: 100%;
+  padding: 1vh 0;
+  border-top: 0.2em solid #882e2e;
+  border-bottom: 0.2em solid #882e2e;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.shy-red #room .user-list button:hover {
+  background-color: #fdbccc;
+  color: #882e2e;
+  border-color: #882e2e;
+}
+
+.shy-red #room .user-list :last-child {
+  margin: 0;
+}
+
+.shy-red #profile {
+  position: relative;
+  top: 5vh;
+  margin: auto;
+  width: 30vw;
+  min-height: 80vh;
+  padding: 1vh 1vw;
+  background-color: #fddddd;
+  border: 0.2em solid #fdbccc;
+}
+
+.shy-red #settings-container {
+  width: 44vw;
+  margin: auto;
+}
+
+.shy-red #settings-list {
+  position: fixed;
+  top: 4vh;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 10vw;
+  border-left: 0.2em solid #fdbccc;
+  border-right: 0.2em solid #fdbccc;
+  padding: 4vh 0;
+  background-color: #fddddd;
+}
+
+.shy-red #settings-list span {
+  color: #882e2e;
+  font-size: 1.2em;
+  padding: 1vh 1.5vw 0;
+  border-bottom: 0.2em solid #fdbccc;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.shy-red #settings-list span:hover {
+  background-color: #fdbccc;
+  border-color: #882e2e;
+}
+
+.shy-red #settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  color: #882e2e;
+  width: 30vw;
+  min-height: 84vh;
+  padding: 6vh 1vw;
+  margin-left: 12vw;
+  border-left: 0.2em solid #fdbccc;
+  border-right: 0.2em solid #fdbccc;
+  background-color: #fddddd;
+}
+
+.shy-red #settings .model-container {
+  margin-bottom: 8vh;
+}
+
+.shy-red #my-friends-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 20vw;
+  height: 80vh;
+  padding: 8vh 1vw;
+  margin: auto;
+  border-left: 0.2em solid #fdbccc;
+  border-right: 0.2em solid #fdbccc;
+  background-color: #fddddd;
+}
+
+.shy-red .user-in-friends {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 6vh;
+  padding: 1.5vh 1vw;
+  margin-bottom: 3vh;
+  color: #882e2e;
+  background-color: #fdbccc;
+}
+
+.shy-red .user-in-friends div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.shy-red .user-in-friends div button {
+  background-color: #882e2e;
+  font-size: 1em;
+  text-align: center;
+  color: #fdbccc;
+  border-top: 0.2em solid #882e2e;
+  border-bottom: 0.2em solid #882e2e;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.shy-red .user-in-friends div button:hover {
+  background-color: #fdbccc;
+  color: #882e2e;
+  border-color: #882e2e;
+}
+
+.shy-red .message {
+  padding: 1vh 1vw;
+  margin-bottom: 2vh;
+  background-color: #882e2e;
+}
+
+.shy-red .message span {
+  color: #fdbccc;
+  margin-right: 3vw;
+}
+
+.shy-red .message p {
+  min-height: 18vh;
+  padding: 1vh 1vw;
+  color: #882e2e;
+  background-color: #fddddd;
+  word-wrap: break-word;
+}
+
+.shy-red #create-room {
+  position: relative;
+  top: 3vh;
+  margin: auto;
+  width: 80vw;
+  min-height: 84vh;
+  padding: 1vh 1vw;
+  background-color: #fddddd;
+  border: 2px solid #882e2e;
+}
+
+.shy-red #create-room form {
+  text-align: center;
+}
+
+.shy-red #create-room form span {
+  font-size: 1.2em;
+  padding-right: 1vw;
+}
+
+.shy-red #create-room form input {
+  font-size: 1em;
+  font-weight: 600;
+  background-color: white;
+  border: 2px solid #882e2e;
+  padding: .5em;
+}
+
+.shy-red #create-room form [type='text'] {
+  width: 40vw;
+  text-align: center;
+}
+
+.shy-red #create-room form [type='submit'] {
+  border-left: none;
+  cursor: pointer;
+}
+
+.boring-blue .container-1 {
+  background-color: #024661;
+  width: 98vw;
+  min-height: 96.1vh;
+  padding: 3.9vh 1vw 0 1vw;
+  overflow: hidden;
+}
+
+.boring-blue .container-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40vw;
+  height: 80vh;
+  padding: 8vh 1vw;
+  border-left: 0.2em solid #aae6fd;
+  border-right: 0.2em solid #aae6fd;
+  margin: auto;
+  background-color: #dff5fd;
+}
+
+.boring-blue #notification {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(2, 70, 97, 0.8);
+  z-index: 1;
+}
+
+.boring-blue #notification .notification-container {
+  position: relative;
+  top: 20vh;
+  margin: auto;
+  width: 14vw;
+  min-height: 12vh;
+  padding: 1vh 1vw;
+  background-color: #dff5fd;
+  border: 2px solid #024661;
+}
+
+.boring-blue #notification .notification-container h3 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 3vh;
+}
+
+.boring-blue #notification .buttons-deciders {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.boring-blue #notification .buttons-deciders button {
+  font: inherit;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 1vh 1vw;
+  color: #024661;
+  background-color: #aae6fd;
+  border: 2px solid #024661;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  cursor: pointer;
+}
+
+.boring-blue #notification .buttons-deciders :nth-child(1):hover {
+  background-color: #61ff96;
+}
+
+.boring-blue #notification .buttons-deciders :nth-child(2):hover {
+  background-color: #f4fc85;
+}
+
+.shy-red #navigation .users-amount .boring-blue a, .shy-red #navigation .users-amount .boring-blue button, .shy-red #navigation .users-amount .boring-blue span, .shy-red #navigation .user-data .boring-blue .username, .boring-blue #navigation .users-amount a, .boring-blue #navigation .users-amount button, .boring-blue #navigation .users-amount span, .boring-blue #navigation .user-data .username, .grass-green #navigation .users-amount .boring-blue a, .grass-green #navigation .users-amount .boring-blue button, .grass-green #navigation .users-amount .boring-blue span, .grass-green #navigation .user-data .boring-blue .username, .sexy-red #navigation .users-amount .boring-blue a, .sexy-red #navigation .users-amount .boring-blue button, .sexy-red #navigation .users-amount .boring-blue span, .sexy-red #navigation .user-data .boring-blue .username, .cosmic-blue #navigation .users-amount .boring-blue a, .cosmic-blue #navigation .users-amount .boring-blue button, .cosmic-blue #navigation .users-amount .boring-blue span, .cosmic-blue #navigation .user-data .boring-blue .username, .jungle-green #navigation .users-amount .boring-blue a, .jungle-green #navigation .users-amount .boring-blue button, .jungle-green #navigation .users-amount .boring-blue span, .jungle-green #navigation .user-data .boring-blue .username {
+  font: inherit;
+  color: #024661;
+  font-size: 1.2em;
+  margin: 0;
+  padding: .3em;
+}
+
+.boring-blue #navigation {
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 96vw;
+  min-height: 2.4em;
+  padding: 0 2vw;
+  background-color: #aae6fd;
+  z-index: 2;
+}
+
+.boring-blue #navigation .users-amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.boring-blue #navigation .users-amount div {
+  background-color: #024661;
+}
+
+.boring-blue #navigation .users-amount div span {
+  display: inline-block;
+  font-size: 1em;
+  color: #aae6fd;
+}
+
+.boring-blue #navigation .user-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.boring-blue #menu-indicator {
+  padding: 0 .1em;
+  font-size: 1.6em;
+  color: #024661;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.boring-blue #menu-indicator:hover {
+  background-color: #024661;
+  color: #aae6fd;
+}
+
+.boring-blue .menu {
+  position: fixed;
+  top: 2.4em;
+  right: -8vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 8vw;
+  height: 88vh;
+  padding: 4vh 0;
+  border-left: 0.2em solid #aae6fd;
+  background-color: #dff5fd;
+  text-align: center;
+  z-index: 10;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.boring-blue .menu div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.boring-blue .menu .general-list a {
+  color: #024661;
+  font-size: 1.2em;
+  padding: 1vh 1.5vw 0;
+  border-bottom: 0.2em solid #aae6fd;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.boring-blue .menu .general-list a:hover {
+  background-color: #aae6fd;
+  border-color: #024661;
+}
+
+.boring-blue .menu .user-data-list a {
+  color: #024661;
+  background-color: #aae6fd;
+  font-size: 1.2em;
+  margin: .5vh .2vw;
+  padding: .5vh 1.5vw;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.boring-blue .menu .user-data-list a:hover {
+  color: #aae6fd;
+  background-color: #024661;
+}
+
+.boring-blue .menu .private-list a, .boring-blue .menu .private-list button {
+  font-size: 1.2em;
+  margin-top: 1vh;
+  color: #dff5fd;
+  background: #024661;
+  border-top: 0.2em solid #024661;
+  border-bottom: 0.2em solid #024661;
+  margin: .5vh .2vw;
+  padding: .5vh 1.5vw;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.boring-blue .menu .private-list a:hover, .boring-blue .menu .private-list button:hover {
+  background-color: #dff5fd;
+  color: #024661;
+  border-color: #024661;
+}
+
+.boring-blue .visible {
+  right: 0vw;
+}
+
+.boring-blue #login {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(2, 70, 97, 0.8);
+}
+
+.boring-blue #login div {
+  position: relative;
+  top: 15vh;
+  margin: auto;
+  width: 14vw;
+  min-height: 40vh;
+  padding: 1vh 1vw;
+  background-color: #dff5fd;
+  border: 2px solid #024661;
+}
+
+.boring-blue #login div h2 {
+  min-height: 6vh;
+  margin: 0;
+  text-align: center;
+  border-bottom: 2px solid #024661;
+}
+
+.boring-blue #login div h4 {
+  color: #024661;
+  margin: 0vh;
+  margin-bottom: 1vh;
+}
+
+.boring-blue #login div h4 span {
+  color: black;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}
+
+.boring-blue #login div form {
+  margin-top: 5vh;
+}
+
+.boring-blue #login div label h3 {
+  text-align: center;
+  margin: 0;
+  padding: 1vh 0;
+}
+
+.boring-blue #login div label input {
+  display: block;
+  width: 100%;
+  height: 2.5vh;
+  margin: auto;
+  border: 2px solid #024661;
+}
+
+.boring-blue #login div input[type="submit"] {
+  display: block;
+  margin: auto;
+  margin-top: 3vh;
+  width: 3vw;
+  height: 6vh;
+  font-size: 2em;
+  color: #024661;
+  background-color: #aae6fd;
+  border: 2px solid #024661;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  cursor: pointer;
+}
+
+.boring-blue #login div input[type="submit"]:hover {
+  color: initial;
+}
+
+.boring-blue .user-in-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 10vh;
+  padding: 1vh 1vw;
+  margin-bottom: 3vh;
+  color: #024661;
+  background-color: #aae6fd;
+}
+
+.boring-blue .user-in-list div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.boring-blue .user-in-list div button {
+  background-color: #024661;
+  font-size: 1em;
+  text-align: center;
+  color: #aae6fd;
+  padding: .5vh 1.5vw;
+  border-top: 0.2em solid #024661;
+  border-bottom: 0.2em solid #024661;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.boring-blue .user-in-list div button:hover {
+  background-color: #aae6fd;
+  color: #024661;
+  border-color: #024661;
+}
+
+.shy-red #rooms .buttons-container .boring-blue button, .shy-red #rooms .buttons-container .boring-blue a, .boring-blue #rooms .buttons-container button, .boring-blue #rooms .buttons-container a, .grass-green #rooms .buttons-container .boring-blue button, .grass-green #rooms .buttons-container .boring-blue a, .sexy-red #rooms .buttons-container .boring-blue button, .sexy-red #rooms .buttons-container .boring-blue a, .cosmic-blue #rooms .buttons-container .boring-blue button, .cosmic-blue #rooms .buttons-container .boring-blue a, .jungle-green #rooms .buttons-container .boring-blue button, .jungle-green #rooms .buttons-container .boring-blue a {
+  display: inline-block;
+  font: inherit;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 1.3vh 1.3vw;
+  color: #024661;
+  background-color: #aae6fd;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  cursor: pointer;
+}
+
+.shy-red #rooms .buttons-container .boring-blue button:hover, .shy-red #rooms .buttons-container .boring-blue a:hover, .boring-blue #rooms .buttons-container button:hover, .boring-blue #rooms .buttons-container a:hover, .grass-green #rooms .buttons-container .boring-blue button:hover, .grass-green #rooms .buttons-container .boring-blue a:hover, .sexy-red #rooms .buttons-container .boring-blue button:hover, .sexy-red #rooms .buttons-container .boring-blue a:hover, .cosmic-blue #rooms .buttons-container .boring-blue button:hover, .cosmic-blue #rooms .buttons-container .boring-blue a:hover, .jungle-green #rooms .buttons-container .boring-blue button:hover, .jungle-green #rooms .buttons-container .boring-blue a:hover {
+  color: #aae6fd;
+  background-color: #024661;
+}
+
+.boring-blue #rooms {
+  position: relative;
+  top: 20vh;
+  margin: auto;
+  width: 20vw;
+  min-height: 15vh;
+  padding: 1vh 1vw;
+  background-color: #dff5fd;
+  border: 0.2em solid #aae6fd;
+}
+
+.boring-blue #rooms .buttons-container {
+  min-height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.boring-blue #rooms .room-list {
+  position: absolute;
+  top: -.2em;
+  bottom: -.2em;
+  right: -11vw;
+  width: 10vw;
+  background-color: #dff5fd;
+  border: 0.2em solid #aae6fd;
+  overflow: auto;
+}
+
+.boring-blue #rooms .room-list span {
+  display: block;
+  margin-top: .3vh;
+  background-color: #024661;
+  text-align: center;
+  font-size: 1em;
+  color: #dff5fd;
+  width: 100%;
+  padding: 1vh 0;
+  border-top: 0.2em solid #024661;
+  border-bottom: 0.2em solid #024661;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.boring-blue #rooms .room-list span:hover {
+  background-color: #aae6fd;
+  color: #024661;
+  border-color: #024661;
+}
+
+.boring-blue #rooms .room-list #empty-list {
+  background-color: inherit;
+  color: #024661;
+}
+
+.boring-blue #room {
+  position: relative;
+  top: 3vh;
+  margin: auto;
+  width: 78vw;
+  min-height: 84vh;
+  padding: 1vh 1vw;
+  background-color: #dff5fd;
+  border: 0.2em solid #aae6fd;
+}
+
+.boring-blue #room h2 {
+  color: #024661;
+}
+
+.boring-blue #room .sidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10vw;
+}
+
+.boring-blue #room .sidebar.left {
+  left: .5vw;
+  text-align: center;
+}
+
+.boring-blue #room .sidebar.left h3 {
+  color: #024661;
+}
+
+.boring-blue #room .sidebar.left div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 3vh;
+}
+
+.boring-blue #room .sidebar.left div span {
+  background-color: #aae6fd;
+  color: #024661;
+  padding: .5vh .2vw;
+  margin-bottom: 1vw;
+}
+
+.boring-blue #room .sidebar.right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  right: 0;
+  padding: .5vh .5vw;
+}
+
+.boring-blue #room .sidebar.right button, .boring-blue #room .sidebar.right a {
+  background-color: #024661;
+  font-size: 1em;
+  text-align: center;
+  color: #dff5fd;
+  border-top: 0.2em solid #024661;
+  border-bottom: 0.2em solid #024661;
+  padding: .8em;
+  margin-bottom: 1vh;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.boring-blue #room .sidebar.right button:hover, .boring-blue #room .sidebar.right a:hover {
+  background-color: #aae6fd;
+  color: #024661;
+  border-color: #024661;
+}
+
+.boring-blue #room h2 {
+  text-align: center;
+  margin: 0 10vw;
+}
+
+.boring-blue #room .chat {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  left: 11vw;
+  right: 11vw;
+  top: 5vh;
+  bottom: 2vh;
+}
+
+.boring-blue #room .chat .message-container {
+  height: 100%;
+  overflow: auto;
+}
+
+.boring-blue #room .chat form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 25vh;
+}
+
+.boring-blue #room .chat form input {
+  background-color: #024661;
+  font-size: 1em;
+  color: #dff5fd;
+  padding: .8em;
+  border-top: 0.2em solid #024661;
+  border-bottom: 0.2em solid #024661;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.boring-blue #room .chat form input:hover {
+  background-color: #aae6fd;
+  color: #024661;
+  border-color: #024661;
+}
+
+.boring-blue #room .chat form textarea {
+  height: 100%;
+  resize: none;
+  font-size: 1.4em;
+  font-weight: 600;
+  padding: 1vh 1vw;
+  background-color: #aae6fd;
+  border-bottom: 0.2em solid #024661;
+}
+
+.boring-blue #room .user-list {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -9.5vw;
+  padding: 1vh .5vw;
+  border: 0.2em solid #aae6fd;
+  width: 7.6vw;
+  background-color: #dff5fd;
+  overflow: auto;
+}
+
+.boring-blue #room .user-list h3 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 3vh;
+}
+
+.boring-blue #room .user-list button {
+  display: block;
+  margin-bottom: 1vh;
+  background-color: #024661;
+  text-align: center;
+  font-size: 1em;
+  color: #dff5fd;
+  width: 100%;
+  padding: 1vh 0;
+  border-top: 0.2em solid #024661;
+  border-bottom: 0.2em solid #024661;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.boring-blue #room .user-list button:hover {
+  background-color: #aae6fd;
+  color: #024661;
+  border-color: #024661;
+}
+
+.boring-blue #room .user-list :last-child {
+  margin: 0;
+}
+
+.boring-blue #profile {
+  position: relative;
+  top: 5vh;
+  margin: auto;
+  width: 30vw;
+  min-height: 80vh;
+  padding: 1vh 1vw;
+  background-color: #dff5fd;
+  border: 0.2em solid #aae6fd;
+}
+
+.boring-blue #settings-container {
+  width: 44vw;
+  margin: auto;
+}
+
+.boring-blue #settings-list {
+  position: fixed;
+  top: 4vh;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 10vw;
+  border-left: 0.2em solid #aae6fd;
+  border-right: 0.2em solid #aae6fd;
+  padding: 4vh 0;
+  background-color: #dff5fd;
+}
+
+.boring-blue #settings-list span {
+  color: #024661;
+  font-size: 1.2em;
+  padding: 1vh 1.5vw 0;
+  border-bottom: 0.2em solid #aae6fd;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.boring-blue #settings-list span:hover {
+  background-color: #aae6fd;
+  border-color: #024661;
+}
+
+.boring-blue #settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  color: #024661;
+  width: 30vw;
+  min-height: 84vh;
+  padding: 6vh 1vw;
+  margin-left: 12vw;
+  border-left: 0.2em solid #aae6fd;
+  border-right: 0.2em solid #aae6fd;
+  background-color: #dff5fd;
+}
+
+.boring-blue #settings .model-container {
+  margin-bottom: 8vh;
+}
+
+.boring-blue #my-friends-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 20vw;
+  height: 80vh;
+  padding: 8vh 1vw;
+  margin: auto;
+  border-left: 0.2em solid #aae6fd;
+  border-right: 0.2em solid #aae6fd;
+  background-color: #dff5fd;
+}
+
+.boring-blue .user-in-friends {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 6vh;
+  padding: 1.5vh 1vw;
+  margin-bottom: 3vh;
+  color: #024661;
+  background-color: #aae6fd;
+}
+
+.boring-blue .user-in-friends div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.boring-blue .user-in-friends div button {
+  background-color: #024661;
+  font-size: 1em;
+  text-align: center;
+  color: #aae6fd;
+  border-top: 0.2em solid #024661;
+  border-bottom: 0.2em solid #024661;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.boring-blue .user-in-friends div button:hover {
+  background-color: #aae6fd;
+  color: #024661;
+  border-color: #024661;
+}
+
+.boring-blue .message {
+  padding: 1vh 1vw;
+  margin-bottom: 2vh;
+  background-color: #024661;
+}
+
+.boring-blue .message span {
+  color: #aae6fd;
+  margin-right: 3vw;
+}
+
+.boring-blue .message p {
+  min-height: 18vh;
+  padding: 1vh 1vw;
+  color: #024661;
+  background-color: #dff5fd;
+  word-wrap: break-word;
+}
+
+.boring-blue #create-room {
+  position: relative;
+  top: 3vh;
+  margin: auto;
+  width: 80vw;
+  min-height: 84vh;
+  padding: 1vh 1vw;
+  background-color: #dff5fd;
+  border: 2px solid #024661;
+}
+
+.boring-blue #create-room form {
+  text-align: center;
+}
+
+.boring-blue #create-room form span {
+  font-size: 1.2em;
+  padding-right: 1vw;
+}
+
+.boring-blue #create-room form input {
+  font-size: 1em;
+  font-weight: 600;
+  background-color: white;
+  border: 2px solid #024661;
+  padding: .5em;
+}
+
+.boring-blue #create-room form [type='text'] {
+  width: 40vw;
+  text-align: center;
+}
+
+.boring-blue #create-room form [type='submit'] {
+  border-left: none;
+  cursor: pointer;
+}
+
+.grass-green .container-1 {
+  background-color: #34662c;
+  width: 98vw;
+  min-height: 96.1vh;
+  padding: 3.9vh 1vw 0 1vw;
+  overflow: hidden;
+}
+
+.grass-green .container-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40vw;
+  height: 80vh;
+  padding: 8vh 1vw;
+  border-left: 0.2em solid #b6ffad;
+  border-right: 0.2em solid #b6ffad;
+  margin: auto;
+  background-color: #e4ffe1;
+}
+
+.grass-green #notification {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(52, 102, 44, 0.8);
+  z-index: 1;
+}
+
+.grass-green #notification .notification-container {
+  position: relative;
+  top: 20vh;
+  margin: auto;
+  width: 14vw;
+  min-height: 12vh;
+  padding: 1vh 1vw;
+  background-color: #e4ffe1;
+  border: 2px solid #34662c;
+}
+
+.grass-green #notification .notification-container h3 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 3vh;
+}
+
+.grass-green #notification .buttons-deciders {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.grass-green #notification .buttons-deciders button {
+  font: inherit;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 1vh 1vw;
+  color: #34662c;
+  background-color: #b6ffad;
+  border: 2px solid #34662c;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  cursor: pointer;
+}
+
+.grass-green #notification .buttons-deciders :nth-child(1):hover {
+  background-color: #61ff96;
+}
+
+.grass-green #notification .buttons-deciders :nth-child(2):hover {
+  background-color: #f4fc85;
+}
+
+.shy-red #navigation .users-amount .grass-green a, .shy-red #navigation .users-amount .grass-green button, .shy-red #navigation .users-amount .grass-green span, .shy-red #navigation .user-data .grass-green .username, .boring-blue #navigation .users-amount .grass-green a, .boring-blue #navigation .users-amount .grass-green button, .boring-blue #navigation .users-amount .grass-green span, .boring-blue #navigation .user-data .grass-green .username, .grass-green #navigation .users-amount a, .grass-green #navigation .users-amount button, .grass-green #navigation .users-amount span, .grass-green #navigation .user-data .username, .sexy-red #navigation .users-amount .grass-green a, .sexy-red #navigation .users-amount .grass-green button, .sexy-red #navigation .users-amount .grass-green span, .sexy-red #navigation .user-data .grass-green .username, .cosmic-blue #navigation .users-amount .grass-green a, .cosmic-blue #navigation .users-amount .grass-green button, .cosmic-blue #navigation .users-amount .grass-green span, .cosmic-blue #navigation .user-data .grass-green .username, .jungle-green #navigation .users-amount .grass-green a, .jungle-green #navigation .users-amount .grass-green button, .jungle-green #navigation .users-amount .grass-green span, .jungle-green #navigation .user-data .grass-green .username {
+  font: inherit;
+  color: #34662c;
+  font-size: 1.2em;
+  margin: 0;
+  padding: .3em;
+}
+
+.grass-green #navigation {
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 96vw;
+  min-height: 2.4em;
+  padding: 0 2vw;
+  background-color: #b6ffad;
+  z-index: 2;
+}
+
+.grass-green #navigation .users-amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.grass-green #navigation .users-amount div {
+  background-color: #34662c;
+}
+
+.grass-green #navigation .users-amount div span {
+  display: inline-block;
+  font-size: 1em;
+  color: #b6ffad;
+}
+
+.grass-green #navigation .user-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.grass-green #menu-indicator {
+  padding: 0 .1em;
+  font-size: 1.6em;
+  color: #34662c;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.grass-green #menu-indicator:hover {
+  background-color: #34662c;
+  color: #b6ffad;
+}
+
+.grass-green .menu {
+  position: fixed;
+  top: 2.4em;
+  right: -8vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 8vw;
+  height: 88vh;
+  padding: 4vh 0;
+  border-left: 0.2em solid #b6ffad;
+  background-color: #e4ffe1;
+  text-align: center;
+  z-index: 10;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.grass-green .menu div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.grass-green .menu .general-list a {
+  color: #34662c;
+  font-size: 1.2em;
+  padding: 1vh 1.5vw 0;
+  border-bottom: 0.2em solid #b6ffad;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.grass-green .menu .general-list a:hover {
+  background-color: #b6ffad;
+  border-color: #34662c;
+}
+
+.grass-green .menu .user-data-list a {
+  color: #34662c;
+  background-color: #b6ffad;
+  font-size: 1.2em;
+  margin: .5vh .2vw;
+  padding: .5vh 1.5vw;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.grass-green .menu .user-data-list a:hover {
+  color: #b6ffad;
+  background-color: #34662c;
+}
+
+.grass-green .menu .private-list a, .grass-green .menu .private-list button {
+  font-size: 1.2em;
+  margin-top: 1vh;
+  color: #e4ffe1;
+  background: #34662c;
+  border-top: 0.2em solid #34662c;
+  border-bottom: 0.2em solid #34662c;
+  margin: .5vh .2vw;
+  padding: .5vh 1.5vw;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.grass-green .menu .private-list a:hover, .grass-green .menu .private-list button:hover {
+  background-color: #e4ffe1;
+  color: #34662c;
+  border-color: #34662c;
+}
+
+.grass-green .visible {
+  right: 0vw;
+}
+
+.grass-green #login {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(52, 102, 44, 0.8);
+}
+
+.grass-green #login div {
+  position: relative;
+  top: 15vh;
+  margin: auto;
+  width: 14vw;
+  min-height: 40vh;
+  padding: 1vh 1vw;
+  background-color: #e4ffe1;
+  border: 2px solid #34662c;
+}
+
+.grass-green #login div h2 {
+  min-height: 6vh;
+  margin: 0;
+  text-align: center;
+  border-bottom: 2px solid #34662c;
+}
+
+.grass-green #login div h4 {
+  color: #34662c;
+  margin: 0vh;
+  margin-bottom: 1vh;
+}
+
+.grass-green #login div h4 span {
+  color: black;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}
+
+.grass-green #login div form {
+  margin-top: 5vh;
+}
+
+.grass-green #login div label h3 {
+  text-align: center;
+  margin: 0;
+  padding: 1vh 0;
+}
+
+.grass-green #login div label input {
+  display: block;
+  width: 100%;
+  height: 2.5vh;
+  margin: auto;
+  border: 2px solid #34662c;
+}
+
+.grass-green #login div input[type="submit"] {
+  display: block;
+  margin: auto;
+  margin-top: 3vh;
+  width: 3vw;
+  height: 6vh;
+  font-size: 2em;
+  color: #34662c;
+  background-color: #b6ffad;
+  border: 2px solid #34662c;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  cursor: pointer;
+}
+
+.grass-green #login div input[type="submit"]:hover {
+  color: initial;
+}
+
+.grass-green .user-in-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 10vh;
+  padding: 1vh 1vw;
+  margin-bottom: 3vh;
+  color: #34662c;
+  background-color: #b6ffad;
+}
+
+.grass-green .user-in-list div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.grass-green .user-in-list div button {
+  background-color: #34662c;
+  font-size: 1em;
+  text-align: center;
+  color: #b6ffad;
+  padding: .5vh 1.5vw;
+  border-top: 0.2em solid #34662c;
+  border-bottom: 0.2em solid #34662c;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.grass-green .user-in-list div button:hover {
+  background-color: #b6ffad;
+  color: #34662c;
+  border-color: #34662c;
+}
+
+.shy-red #rooms .buttons-container .grass-green button, .shy-red #rooms .buttons-container .grass-green a, .boring-blue #rooms .buttons-container .grass-green button, .boring-blue #rooms .buttons-container .grass-green a, .grass-green #rooms .buttons-container button, .grass-green #rooms .buttons-container a, .sexy-red #rooms .buttons-container .grass-green button, .sexy-red #rooms .buttons-container .grass-green a, .cosmic-blue #rooms .buttons-container .grass-green button, .cosmic-blue #rooms .buttons-container .grass-green a, .jungle-green #rooms .buttons-container .grass-green button, .jungle-green #rooms .buttons-container .grass-green a {
+  display: inline-block;
+  font: inherit;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 1.3vh 1.3vw;
+  color: #34662c;
+  background-color: #b6ffad;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  cursor: pointer;
+}
+
+.shy-red #rooms .buttons-container .grass-green button:hover, .shy-red #rooms .buttons-container .grass-green a:hover, .boring-blue #rooms .buttons-container .grass-green button:hover, .boring-blue #rooms .buttons-container .grass-green a:hover, .grass-green #rooms .buttons-container button:hover, .grass-green #rooms .buttons-container a:hover, .sexy-red #rooms .buttons-container .grass-green button:hover, .sexy-red #rooms .buttons-container .grass-green a:hover, .cosmic-blue #rooms .buttons-container .grass-green button:hover, .cosmic-blue #rooms .buttons-container .grass-green a:hover, .jungle-green #rooms .buttons-container .grass-green button:hover, .jungle-green #rooms .buttons-container .grass-green a:hover {
+  color: #b6ffad;
+  background-color: #34662c;
+}
+
+.grass-green #rooms {
+  position: relative;
+  top: 20vh;
+  margin: auto;
+  width: 20vw;
+  min-height: 15vh;
+  padding: 1vh 1vw;
+  background-color: #e4ffe1;
+  border: 0.2em solid #b6ffad;
+}
+
+.grass-green #rooms .buttons-container {
+  min-height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.grass-green #rooms .room-list {
+  position: absolute;
+  top: -.2em;
+  bottom: -.2em;
+  right: -11vw;
+  width: 10vw;
+  background-color: #e4ffe1;
+  border: 0.2em solid #b6ffad;
+  overflow: auto;
+}
+
+.grass-green #rooms .room-list span {
+  display: block;
+  margin-top: .3vh;
+  background-color: #34662c;
+  text-align: center;
+  font-size: 1em;
+  color: #e4ffe1;
+  width: 100%;
+  padding: 1vh 0;
+  border-top: 0.2em solid #34662c;
+  border-bottom: 0.2em solid #34662c;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.grass-green #rooms .room-list span:hover {
+  background-color: #b6ffad;
+  color: #34662c;
+  border-color: #34662c;
+}
+
+.grass-green #rooms .room-list #empty-list {
+  background-color: inherit;
+  color: #34662c;
+}
+
+.grass-green #room {
+  position: relative;
+  top: 3vh;
+  margin: auto;
+  width: 78vw;
+  min-height: 84vh;
+  padding: 1vh 1vw;
+  background-color: #e4ffe1;
+  border: 0.2em solid #b6ffad;
+}
+
+.grass-green #room h2 {
+  color: #34662c;
+}
+
+.grass-green #room .sidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10vw;
+}
+
+.grass-green #room .sidebar.left {
+  left: .5vw;
+  text-align: center;
+}
+
+.grass-green #room .sidebar.left h3 {
+  color: #34662c;
+}
+
+.grass-green #room .sidebar.left div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 3vh;
+}
+
+.grass-green #room .sidebar.left div span {
+  background-color: #b6ffad;
+  color: #34662c;
+  padding: .5vh .2vw;
+  margin-bottom: 1vw;
+}
+
+.grass-green #room .sidebar.right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  right: 0;
+  padding: .5vh .5vw;
+}
+
+.grass-green #room .sidebar.right button, .grass-green #room .sidebar.right a {
+  background-color: #34662c;
+  font-size: 1em;
+  text-align: center;
+  color: #e4ffe1;
+  border-top: 0.2em solid #34662c;
+  border-bottom: 0.2em solid #34662c;
+  padding: .8em;
+  margin-bottom: 1vh;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.grass-green #room .sidebar.right button:hover, .grass-green #room .sidebar.right a:hover {
+  background-color: #b6ffad;
+  color: #34662c;
+  border-color: #34662c;
+}
+
+.grass-green #room h2 {
+  text-align: center;
+  margin: 0 10vw;
+}
+
+.grass-green #room .chat {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  left: 11vw;
+  right: 11vw;
+  top: 5vh;
+  bottom: 2vh;
+}
+
+.grass-green #room .chat .message-container {
+  height: 100%;
+  overflow: auto;
+}
+
+.grass-green #room .chat form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 25vh;
+}
+
+.grass-green #room .chat form input {
+  background-color: #34662c;
+  font-size: 1em;
+  color: #e4ffe1;
+  padding: .8em;
+  border-top: 0.2em solid #34662c;
+  border-bottom: 0.2em solid #34662c;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.grass-green #room .chat form input:hover {
+  background-color: #b6ffad;
+  color: #34662c;
+  border-color: #34662c;
+}
+
+.grass-green #room .chat form textarea {
+  height: 100%;
+  resize: none;
+  font-size: 1.4em;
+  font-weight: 600;
+  padding: 1vh 1vw;
+  background-color: #b6ffad;
+  border-bottom: 0.2em solid #34662c;
+}
+
+.grass-green #room .user-list {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -9.5vw;
+  padding: 1vh .5vw;
+  border: 0.2em solid #b6ffad;
+  width: 7.6vw;
+  background-color: #e4ffe1;
+  overflow: auto;
+}
+
+.grass-green #room .user-list h3 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 3vh;
+}
+
+.grass-green #room .user-list button {
+  display: block;
+  margin-bottom: 1vh;
+  background-color: #34662c;
+  text-align: center;
+  font-size: 1em;
+  color: #e4ffe1;
+  width: 100%;
+  padding: 1vh 0;
+  border-top: 0.2em solid #34662c;
+  border-bottom: 0.2em solid #34662c;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.grass-green #room .user-list button:hover {
+  background-color: #b6ffad;
+  color: #34662c;
+  border-color: #34662c;
+}
+
+.grass-green #room .user-list :last-child {
+  margin: 0;
+}
+
+.grass-green #profile {
+  position: relative;
+  top: 5vh;
+  margin: auto;
+  width: 30vw;
+  min-height: 80vh;
+  padding: 1vh 1vw;
+  background-color: #e4ffe1;
+  border: 0.2em solid #b6ffad;
+}
+
+.grass-green #settings-container {
+  width: 44vw;
+  margin: auto;
+}
+
+.grass-green #settings-list {
+  position: fixed;
+  top: 4vh;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 10vw;
+  border-left: 0.2em solid #b6ffad;
+  border-right: 0.2em solid #b6ffad;
+  padding: 4vh 0;
+  background-color: #e4ffe1;
+}
+
+.grass-green #settings-list span {
+  color: #34662c;
+  font-size: 1.2em;
+  padding: 1vh 1.5vw 0;
+  border-bottom: 0.2em solid #b6ffad;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.grass-green #settings-list span:hover {
+  background-color: #b6ffad;
+  border-color: #34662c;
+}
+
+.grass-green #settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  color: #34662c;
+  width: 30vw;
+  min-height: 84vh;
+  padding: 6vh 1vw;
+  margin-left: 12vw;
+  border-left: 0.2em solid #b6ffad;
+  border-right: 0.2em solid #b6ffad;
+  background-color: #e4ffe1;
+}
+
+.grass-green #settings .model-container {
+  margin-bottom: 8vh;
+}
+
+.grass-green #my-friends-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 20vw;
+  height: 80vh;
+  padding: 8vh 1vw;
+  margin: auto;
+  border-left: 0.2em solid #b6ffad;
+  border-right: 0.2em solid #b6ffad;
+  background-color: #e4ffe1;
+}
+
+.grass-green .user-in-friends {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 6vh;
+  padding: 1.5vh 1vw;
+  margin-bottom: 3vh;
+  color: #34662c;
+  background-color: #b6ffad;
+}
+
+.grass-green .user-in-friends div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.grass-green .user-in-friends div button {
+  background-color: #34662c;
+  font-size: 1em;
+  text-align: center;
+  color: #b6ffad;
+  border-top: 0.2em solid #34662c;
+  border-bottom: 0.2em solid #34662c;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.grass-green .user-in-friends div button:hover {
+  background-color: #b6ffad;
+  color: #34662c;
+  border-color: #34662c;
+}
+
+.grass-green .message {
+  padding: 1vh 1vw;
+  margin-bottom: 2vh;
+  background-color: #34662c;
+}
+
+.grass-green .message span {
+  color: #b6ffad;
+  margin-right: 3vw;
+}
+
+.grass-green .message p {
+  min-height: 18vh;
+  padding: 1vh 1vw;
+  color: #34662c;
+  background-color: #e4ffe1;
+  word-wrap: break-word;
+}
+
+.grass-green #create-room {
+  position: relative;
+  top: 3vh;
+  margin: auto;
+  width: 80vw;
+  min-height: 84vh;
+  padding: 1vh 1vw;
+  background-color: #e4ffe1;
+  border: 2px solid #34662c;
+}
+
+.grass-green #create-room form {
+  text-align: center;
+}
+
+.grass-green #create-room form span {
+  font-size: 1.2em;
+  padding-right: 1vw;
+}
+
+.grass-green #create-room form input {
+  font-size: 1em;
+  font-weight: 600;
+  background-color: white;
+  border: 2px solid #34662c;
+  padding: .5em;
+}
+
+.grass-green #create-room form [type='text'] {
+  width: 40vw;
+  text-align: center;
+}
+
+.grass-green #create-room form [type='submit'] {
+  border-left: none;
+  cursor: pointer;
+}
+
+.sexy-red .container-1 {
+  background-color: #250000;
+  width: 98vw;
+  min-height: 96.1vh;
+  padding: 3.9vh 1vw 0 1vw;
+  overflow: hidden;
+}
+
+.sexy-red .container-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40vw;
+  height: 80vh;
+  padding: 8vh 1vw;
+  border-left: 0.2em solid #ff3131;
+  border-right: 0.2em solid #ff3131;
+  margin: auto;
+  background-color: #b45656;
+}
+
+.sexy-red #notification {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(37, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.sexy-red #notification .notification-container {
+  position: relative;
+  top: 20vh;
+  margin: auto;
+  width: 14vw;
+  min-height: 12vh;
+  padding: 1vh 1vw;
+  background-color: #b45656;
+  border: 2px solid #250000;
+}
+
+.sexy-red #notification .notification-container h3 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 3vh;
+}
+
+.sexy-red #notification .buttons-deciders {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sexy-red #notification .buttons-deciders button {
+  font: inherit;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 1vh 1vw;
+  color: #250000;
+  background-color: #ff3131;
+  border: 2px solid #250000;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  cursor: pointer;
+}
+
+.sexy-red #notification .buttons-deciders :nth-child(1):hover {
+  background-color: #61ff96;
+}
+
+.sexy-red #notification .buttons-deciders :nth-child(2):hover {
+  background-color: #f4fc85;
+}
+
+.shy-red #navigation .users-amount .sexy-red a, .shy-red #navigation .users-amount .sexy-red button, .shy-red #navigation .users-amount .sexy-red span, .shy-red #navigation .user-data .sexy-red .username, .boring-blue #navigation .users-amount .sexy-red a, .boring-blue #navigation .users-amount .sexy-red button, .boring-blue #navigation .users-amount .sexy-red span, .boring-blue #navigation .user-data .sexy-red .username, .grass-green #navigation .users-amount .sexy-red a, .grass-green #navigation .users-amount .sexy-red button, .grass-green #navigation .users-amount .sexy-red span, .grass-green #navigation .user-data .sexy-red .username, .sexy-red #navigation .users-amount a, .sexy-red #navigation .users-amount button, .sexy-red #navigation .users-amount span, .sexy-red #navigation .user-data .username, .cosmic-blue #navigation .users-amount .sexy-red a, .cosmic-blue #navigation .users-amount .sexy-red button, .cosmic-blue #navigation .users-amount .sexy-red span, .cosmic-blue #navigation .user-data .sexy-red .username, .jungle-green #navigation .users-amount .sexy-red a, .jungle-green #navigation .users-amount .sexy-red button, .jungle-green #navigation .users-amount .sexy-red span, .jungle-green #navigation .user-data .sexy-red .username {
+  font: inherit;
+  color: #250000;
+  font-size: 1.2em;
+  margin: 0;
+  padding: .3em;
+}
+
+.sexy-red #navigation {
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 96vw;
+  min-height: 2.4em;
+  padding: 0 2vw;
+  background-color: #ff3131;
+  z-index: 2;
+}
+
+.sexy-red #navigation .users-amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sexy-red #navigation .users-amount div {
+  background-color: #250000;
+}
+
+.sexy-red #navigation .users-amount div span {
+  display: inline-block;
+  font-size: 1em;
+  color: #ff3131;
+}
+
+.sexy-red #navigation .user-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sexy-red #menu-indicator {
+  padding: 0 .1em;
+  font-size: 1.6em;
+  color: #250000;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.sexy-red #menu-indicator:hover {
+  background-color: #250000;
+  color: #ff3131;
+}
+
+.sexy-red .menu {
+  position: fixed;
+  top: 2.4em;
+  right: -8vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 8vw;
+  height: 88vh;
+  padding: 4vh 0;
+  border-left: 0.2em solid #ff3131;
+  background-color: #b45656;
+  text-align: center;
+  z-index: 10;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.sexy-red .menu div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sexy-red .menu .general-list a {
+  color: #250000;
+  font-size: 1.2em;
+  padding: 1vh 1.5vw 0;
+  border-bottom: 0.2em solid #ff3131;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.sexy-red .menu .general-list a:hover {
+  background-color: #ff3131;
+  border-color: #250000;
+}
+
+.sexy-red .menu .user-data-list a {
+  color: #250000;
+  background-color: #ff3131;
+  font-size: 1.2em;
+  margin: .5vh .2vw;
+  padding: .5vh 1.5vw;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.sexy-red .menu .user-data-list a:hover {
+  color: #ff3131;
+  background-color: #250000;
+}
+
+.sexy-red .menu .private-list a, .sexy-red .menu .private-list button {
+  font-size: 1.2em;
+  margin-top: 1vh;
+  color: #b45656;
+  background: #250000;
+  border-top: 0.2em solid #250000;
+  border-bottom: 0.2em solid #250000;
+  margin: .5vh .2vw;
+  padding: .5vh 1.5vw;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.sexy-red .menu .private-list a:hover, .sexy-red .menu .private-list button:hover {
+  background-color: #b45656;
+  color: #250000;
+  border-color: #250000;
+}
+
+.sexy-red .visible {
+  right: 0vw;
+}
+
+.sexy-red #login {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(37, 0, 0, 0.8);
+}
+
+.sexy-red #login div {
+  position: relative;
+  top: 15vh;
+  margin: auto;
+  width: 14vw;
+  min-height: 40vh;
+  padding: 1vh 1vw;
+  background-color: #b45656;
+  border: 2px solid #250000;
+}
+
+.sexy-red #login div h2 {
+  min-height: 6vh;
+  margin: 0;
+  text-align: center;
+  border-bottom: 2px solid #250000;
+}
+
+.sexy-red #login div h4 {
+  color: #250000;
+  margin: 0vh;
+  margin-bottom: 1vh;
+}
+
+.sexy-red #login div h4 span {
+  color: black;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}
+
+.sexy-red #login div form {
+  margin-top: 5vh;
+}
+
+.sexy-red #login div label h3 {
+  text-align: center;
+  margin: 0;
+  padding: 1vh 0;
+}
+
+.sexy-red #login div label input {
+  display: block;
+  width: 100%;
+  height: 2.5vh;
+  margin: auto;
+  border: 2px solid #250000;
+}
+
+.sexy-red #login div input[type="submit"] {
+  display: block;
+  margin: auto;
+  margin-top: 3vh;
+  width: 3vw;
+  height: 6vh;
+  font-size: 2em;
+  color: #250000;
+  background-color: #ff3131;
+  border: 2px solid #250000;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  cursor: pointer;
+}
+
+.sexy-red #login div input[type="submit"]:hover {
+  color: initial;
+}
+
+.sexy-red .user-in-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 10vh;
+  padding: 1vh 1vw;
+  margin-bottom: 3vh;
+  color: #250000;
+  background-color: #ff3131;
+}
+
+.sexy-red .user-in-list div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sexy-red .user-in-list div button {
+  background-color: #250000;
+  font-size: 1em;
+  text-align: center;
+  color: #ff3131;
+  padding: .5vh 1.5vw;
+  border-top: 0.2em solid #250000;
+  border-bottom: 0.2em solid #250000;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.sexy-red .user-in-list div button:hover {
+  background-color: #ff3131;
+  color: #250000;
+  border-color: #250000;
+}
+
+.shy-red #rooms .buttons-container .sexy-red button, .shy-red #rooms .buttons-container .sexy-red a, .boring-blue #rooms .buttons-container .sexy-red button, .boring-blue #rooms .buttons-container .sexy-red a, .grass-green #rooms .buttons-container .sexy-red button, .grass-green #rooms .buttons-container .sexy-red a, .sexy-red #rooms .buttons-container button, .sexy-red #rooms .buttons-container a, .cosmic-blue #rooms .buttons-container .sexy-red button, .cosmic-blue #rooms .buttons-container .sexy-red a, .jungle-green #rooms .buttons-container .sexy-red button, .jungle-green #rooms .buttons-container .sexy-red a {
+  display: inline-block;
+  font: inherit;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 1.3vh 1.3vw;
+  color: #250000;
+  background-color: #ff3131;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  cursor: pointer;
+}
+
+.shy-red #rooms .buttons-container .sexy-red button:hover, .shy-red #rooms .buttons-container .sexy-red a:hover, .boring-blue #rooms .buttons-container .sexy-red button:hover, .boring-blue #rooms .buttons-container .sexy-red a:hover, .grass-green #rooms .buttons-container .sexy-red button:hover, .grass-green #rooms .buttons-container .sexy-red a:hover, .sexy-red #rooms .buttons-container button:hover, .sexy-red #rooms .buttons-container a:hover, .cosmic-blue #rooms .buttons-container .sexy-red button:hover, .cosmic-blue #rooms .buttons-container .sexy-red a:hover, .jungle-green #rooms .buttons-container .sexy-red button:hover, .jungle-green #rooms .buttons-container .sexy-red a:hover {
+  color: #ff3131;
+  background-color: #250000;
+}
+
+.sexy-red #rooms {
+  position: relative;
+  top: 20vh;
+  margin: auto;
+  width: 20vw;
+  min-height: 15vh;
+  padding: 1vh 1vw;
+  background-color: #b45656;
+  border: 0.2em solid #ff3131;
+}
+
+.sexy-red #rooms .buttons-container {
+  min-height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sexy-red #rooms .room-list {
+  position: absolute;
+  top: -.2em;
+  bottom: -.2em;
+  right: -11vw;
+  width: 10vw;
+  background-color: #b45656;
+  border: 0.2em solid #ff3131;
+  overflow: auto;
+}
+
+.sexy-red #rooms .room-list span {
+  display: block;
+  margin-top: .3vh;
+  background-color: #250000;
+  text-align: center;
+  font-size: 1em;
+  color: #b45656;
+  width: 100%;
+  padding: 1vh 0;
+  border-top: 0.2em solid #250000;
+  border-bottom: 0.2em solid #250000;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.sexy-red #rooms .room-list span:hover {
+  background-color: #ff3131;
+  color: #250000;
+  border-color: #250000;
+}
+
+.sexy-red #rooms .room-list #empty-list {
+  background-color: inherit;
+  color: #250000;
+}
+
+.sexy-red #room {
+  position: relative;
+  top: 3vh;
+  margin: auto;
+  width: 78vw;
+  min-height: 84vh;
+  padding: 1vh 1vw;
+  background-color: #b45656;
+  border: 0.2em solid #ff3131;
+}
+
+.sexy-red #room h2 {
+  color: #250000;
+}
+
+.sexy-red #room .sidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10vw;
+}
+
+.sexy-red #room .sidebar.left {
+  left: .5vw;
+  text-align: center;
+}
+
+.sexy-red #room .sidebar.left h3 {
+  color: #250000;
+}
+
+.sexy-red #room .sidebar.left div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 3vh;
+}
+
+.sexy-red #room .sidebar.left div span {
+  background-color: #ff3131;
+  color: #250000;
+  padding: .5vh .2vw;
+  margin-bottom: 1vw;
+}
+
+.sexy-red #room .sidebar.right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  right: 0;
+  padding: .5vh .5vw;
+}
+
+.sexy-red #room .sidebar.right button, .sexy-red #room .sidebar.right a {
+  background-color: #250000;
+  font-size: 1em;
+  text-align: center;
+  color: #b45656;
+  border-top: 0.2em solid #250000;
+  border-bottom: 0.2em solid #250000;
+  padding: .8em;
+  margin-bottom: 1vh;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.sexy-red #room .sidebar.right button:hover, .sexy-red #room .sidebar.right a:hover {
+  background-color: #ff3131;
+  color: #250000;
+  border-color: #250000;
+}
+
+.sexy-red #room h2 {
+  text-align: center;
+  margin: 0 10vw;
+}
+
+.sexy-red #room .chat {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  left: 11vw;
+  right: 11vw;
+  top: 5vh;
+  bottom: 2vh;
+}
+
+.sexy-red #room .chat .message-container {
+  height: 100%;
+  overflow: auto;
+}
+
+.sexy-red #room .chat form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 25vh;
+}
+
+.sexy-red #room .chat form input {
+  background-color: #250000;
+  font-size: 1em;
+  color: #b45656;
+  padding: .8em;
+  border-top: 0.2em solid #250000;
+  border-bottom: 0.2em solid #250000;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.sexy-red #room .chat form input:hover {
+  background-color: #ff3131;
+  color: #250000;
+  border-color: #250000;
+}
+
+.sexy-red #room .chat form textarea {
+  height: 100%;
+  resize: none;
+  font-size: 1.4em;
+  font-weight: 600;
+  padding: 1vh 1vw;
+  background-color: #ff3131;
+  border-bottom: 0.2em solid #250000;
+}
+
+.sexy-red #room .user-list {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -9.5vw;
+  padding: 1vh .5vw;
+  border: 0.2em solid #ff3131;
+  width: 7.6vw;
+  background-color: #b45656;
+  overflow: auto;
+}
+
+.sexy-red #room .user-list h3 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 3vh;
+}
+
+.sexy-red #room .user-list button {
+  display: block;
+  margin-bottom: 1vh;
+  background-color: #250000;
+  text-align: center;
+  font-size: 1em;
+  color: #b45656;
+  width: 100%;
+  padding: 1vh 0;
+  border-top: 0.2em solid #250000;
+  border-bottom: 0.2em solid #250000;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.sexy-red #room .user-list button:hover {
+  background-color: #ff3131;
+  color: #250000;
+  border-color: #250000;
+}
+
+.sexy-red #room .user-list :last-child {
+  margin: 0;
+}
+
+.sexy-red #profile {
+  position: relative;
+  top: 5vh;
+  margin: auto;
+  width: 30vw;
+  min-height: 80vh;
+  padding: 1vh 1vw;
+  background-color: #b45656;
+  border: 0.2em solid #ff3131;
+}
+
+.sexy-red #settings-container {
+  width: 44vw;
+  margin: auto;
+}
+
+.sexy-red #settings-list {
+  position: fixed;
+  top: 4vh;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 10vw;
+  border-left: 0.2em solid #ff3131;
+  border-right: 0.2em solid #ff3131;
+  padding: 4vh 0;
+  background-color: #b45656;
+}
+
+.sexy-red #settings-list span {
+  color: #250000;
+  font-size: 1.2em;
+  padding: 1vh 1.5vw 0;
+  border-bottom: 0.2em solid #ff3131;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.sexy-red #settings-list span:hover {
+  background-color: #ff3131;
+  border-color: #250000;
+}
+
+.sexy-red #settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  color: #250000;
+  width: 30vw;
+  min-height: 84vh;
+  padding: 6vh 1vw;
+  margin-left: 12vw;
+  border-left: 0.2em solid #ff3131;
+  border-right: 0.2em solid #ff3131;
+  background-color: #b45656;
+}
+
+.sexy-red #settings .model-container {
+  margin-bottom: 8vh;
+}
+
+.sexy-red #my-friends-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 20vw;
+  height: 80vh;
+  padding: 8vh 1vw;
+  margin: auto;
+  border-left: 0.2em solid #ff3131;
+  border-right: 0.2em solid #ff3131;
+  background-color: #b45656;
+}
+
+.sexy-red .user-in-friends {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 6vh;
+  padding: 1.5vh 1vw;
+  margin-bottom: 3vh;
+  color: #250000;
+  background-color: #ff3131;
+}
+
+.sexy-red .user-in-friends div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sexy-red .user-in-friends div button {
+  background-color: #250000;
+  font-size: 1em;
+  text-align: center;
+  color: #ff3131;
+  border-top: 0.2em solid #250000;
+  border-bottom: 0.2em solid #250000;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.sexy-red .user-in-friends div button:hover {
+  background-color: #ff3131;
+  color: #250000;
+  border-color: #250000;
+}
+
+.sexy-red .message {
+  padding: 1vh 1vw;
+  margin-bottom: 2vh;
+  background-color: #250000;
+}
+
+.sexy-red .message span {
+  color: #ff3131;
+  margin-right: 3vw;
+}
+
+.sexy-red .message p {
+  min-height: 18vh;
+  padding: 1vh 1vw;
+  color: #250000;
+  background-color: #b45656;
+  word-wrap: break-word;
+}
+
+.sexy-red #create-room {
+  position: relative;
+  top: 3vh;
+  margin: auto;
+  width: 80vw;
+  min-height: 84vh;
+  padding: 1vh 1vw;
+  background-color: #b45656;
+  border: 2px solid #250000;
+}
+
+.sexy-red #create-room form {
+  text-align: center;
+}
+
+.sexy-red #create-room form span {
+  font-size: 1.2em;
+  padding-right: 1vw;
+}
+
+.sexy-red #create-room form input {
+  font-size: 1em;
+  font-weight: 600;
+  background-color: white;
+  border: 2px solid #250000;
+  padding: .5em;
+}
+
+.sexy-red #create-room form [type='text'] {
+  width: 40vw;
+  text-align: center;
+}
+
+.sexy-red #create-room form [type='submit'] {
+  border-left: none;
+  cursor: pointer;
+}
+
+.cosmic-blue .container-1 {
+  background-color: #150027;
+  width: 98vw;
+  min-height: 96.1vh;
+  padding: 3.9vh 1vw 0 1vw;
+  overflow: hidden;
+}
+
+.cosmic-blue .container-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40vw;
+  height: 80vh;
+  padding: 8vh 1vw;
+  border-left: 0.2em solid #00e1ff;
+  border-right: 0.2em solid #00e1ff;
+  margin: auto;
+  background-color: #079cff;
+}
+
+.cosmic-blue #notification {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(21, 0, 39, 0.8);
+  z-index: 1;
+}
+
+.cosmic-blue #notification .notification-container {
+  position: relative;
+  top: 20vh;
+  margin: auto;
+  width: 14vw;
+  min-height: 12vh;
+  padding: 1vh 1vw;
+  background-color: #079cff;
+  border: 2px solid #150027;
+}
+
+.cosmic-blue #notification .notification-container h3 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 3vh;
+}
+
+.cosmic-blue #notification .buttons-deciders {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cosmic-blue #notification .buttons-deciders button {
+  font: inherit;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 1vh 1vw;
+  color: #150027;
+  background-color: #00e1ff;
+  border: 2px solid #150027;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  cursor: pointer;
+}
+
+.cosmic-blue #notification .buttons-deciders :nth-child(1):hover {
+  background-color: #61ff96;
+}
+
+.cosmic-blue #notification .buttons-deciders :nth-child(2):hover {
+  background-color: #f4fc85;
+}
+
+.shy-red #navigation .users-amount .cosmic-blue a, .shy-red #navigation .users-amount .cosmic-blue button, .shy-red #navigation .users-amount .cosmic-blue span, .shy-red #navigation .user-data .cosmic-blue .username, .boring-blue #navigation .users-amount .cosmic-blue a, .boring-blue #navigation .users-amount .cosmic-blue button, .boring-blue #navigation .users-amount .cosmic-blue span, .boring-blue #navigation .user-data .cosmic-blue .username, .grass-green #navigation .users-amount .cosmic-blue a, .grass-green #navigation .users-amount .cosmic-blue button, .grass-green #navigation .users-amount .cosmic-blue span, .grass-green #navigation .user-data .cosmic-blue .username, .sexy-red #navigation .users-amount .cosmic-blue a, .sexy-red #navigation .users-amount .cosmic-blue button, .sexy-red #navigation .users-amount .cosmic-blue span, .sexy-red #navigation .user-data .cosmic-blue .username, .cosmic-blue #navigation .users-amount a, .cosmic-blue #navigation .users-amount button, .cosmic-blue #navigation .users-amount span, .cosmic-blue #navigation .user-data .username, .jungle-green #navigation .users-amount .cosmic-blue a, .jungle-green #navigation .users-amount .cosmic-blue button, .jungle-green #navigation .users-amount .cosmic-blue span, .jungle-green #navigation .user-data .cosmic-blue .username {
+  font: inherit;
+  color: #150027;
+  font-size: 1.2em;
+  margin: 0;
+  padding: .3em;
+}
+
+.cosmic-blue #navigation {
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 96vw;
+  min-height: 2.4em;
+  padding: 0 2vw;
+  background-color: #00e1ff;
+  z-index: 2;
+}
+
+.cosmic-blue #navigation .users-amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cosmic-blue #navigation .users-amount div {
+  background-color: #150027;
+}
+
+.cosmic-blue #navigation .users-amount div span {
+  display: inline-block;
+  font-size: 1em;
+  color: #00e1ff;
+}
+
+.cosmic-blue #navigation .user-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cosmic-blue #menu-indicator {
+  padding: 0 .1em;
+  font-size: 1.6em;
+  color: #150027;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.cosmic-blue #menu-indicator:hover {
+  background-color: #150027;
+  color: #00e1ff;
+}
+
+.cosmic-blue .menu {
+  position: fixed;
+  top: 2.4em;
+  right: -8vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 8vw;
+  height: 88vh;
+  padding: 4vh 0;
+  border-left: 0.2em solid #00e1ff;
+  background-color: #079cff;
+  text-align: center;
+  z-index: 10;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.cosmic-blue .menu div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cosmic-blue .menu .general-list a {
+  color: #150027;
+  font-size: 1.2em;
+  padding: 1vh 1.5vw 0;
+  border-bottom: 0.2em solid #00e1ff;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.cosmic-blue .menu .general-list a:hover {
+  background-color: #00e1ff;
+  border-color: #150027;
+}
+
+.cosmic-blue .menu .user-data-list a {
+  color: #150027;
+  background-color: #00e1ff;
+  font-size: 1.2em;
+  margin: .5vh .2vw;
+  padding: .5vh 1.5vw;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.cosmic-blue .menu .user-data-list a:hover {
+  color: #00e1ff;
+  background-color: #150027;
+}
+
+.cosmic-blue .menu .private-list a, .cosmic-blue .menu .private-list button {
+  font-size: 1.2em;
+  margin-top: 1vh;
+  color: #079cff;
+  background: #150027;
+  border-top: 0.2em solid #150027;
+  border-bottom: 0.2em solid #150027;
+  margin: .5vh .2vw;
+  padding: .5vh 1.5vw;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.cosmic-blue .menu .private-list a:hover, .cosmic-blue .menu .private-list button:hover {
+  background-color: #079cff;
+  color: #150027;
+  border-color: #150027;
+}
+
+.cosmic-blue .visible {
+  right: 0vw;
+}
+
+.cosmic-blue #login {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(21, 0, 39, 0.8);
+}
+
+.cosmic-blue #login div {
+  position: relative;
+  top: 15vh;
+  margin: auto;
+  width: 14vw;
+  min-height: 40vh;
+  padding: 1vh 1vw;
+  background-color: #079cff;
+  border: 2px solid #150027;
+}
+
+.cosmic-blue #login div h2 {
+  min-height: 6vh;
+  margin: 0;
+  text-align: center;
+  border-bottom: 2px solid #150027;
+}
+
+.cosmic-blue #login div h4 {
+  color: #150027;
+  margin: 0vh;
+  margin-bottom: 1vh;
+}
+
+.cosmic-blue #login div h4 span {
+  color: black;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}
+
+.cosmic-blue #login div form {
+  margin-top: 5vh;
+}
+
+.cosmic-blue #login div label h3 {
+  text-align: center;
+  margin: 0;
+  padding: 1vh 0;
+}
+
+.cosmic-blue #login div label input {
+  display: block;
+  width: 100%;
+  height: 2.5vh;
+  margin: auto;
+  border: 2px solid #150027;
+}
+
+.cosmic-blue #login div input[type="submit"] {
+  display: block;
+  margin: auto;
+  margin-top: 3vh;
+  width: 3vw;
+  height: 6vh;
+  font-size: 2em;
+  color: #150027;
+  background-color: #00e1ff;
+  border: 2px solid #150027;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  cursor: pointer;
+}
+
+.cosmic-blue #login div input[type="submit"]:hover {
+  color: initial;
+}
+
+.cosmic-blue .user-in-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 10vh;
+  padding: 1vh 1vw;
+  margin-bottom: 3vh;
+  color: #150027;
+  background-color: #00e1ff;
+}
+
+.cosmic-blue .user-in-list div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cosmic-blue .user-in-list div button {
+  background-color: #150027;
+  font-size: 1em;
+  text-align: center;
+  color: #00e1ff;
+  padding: .5vh 1.5vw;
+  border-top: 0.2em solid #150027;
+  border-bottom: 0.2em solid #150027;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.cosmic-blue .user-in-list div button:hover {
+  background-color: #00e1ff;
+  color: #150027;
+  border-color: #150027;
+}
+
+.shy-red #rooms .buttons-container .cosmic-blue button, .shy-red #rooms .buttons-container .cosmic-blue a, .boring-blue #rooms .buttons-container .cosmic-blue button, .boring-blue #rooms .buttons-container .cosmic-blue a, .grass-green #rooms .buttons-container .cosmic-blue button, .grass-green #rooms .buttons-container .cosmic-blue a, .sexy-red #rooms .buttons-container .cosmic-blue button, .sexy-red #rooms .buttons-container .cosmic-blue a, .cosmic-blue #rooms .buttons-container button, .cosmic-blue #rooms .buttons-container a, .jungle-green #rooms .buttons-container .cosmic-blue button, .jungle-green #rooms .buttons-container .cosmic-blue a {
+  display: inline-block;
+  font: inherit;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 1.3vh 1.3vw;
+  color: #150027;
+  background-color: #00e1ff;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  cursor: pointer;
+}
+
+.shy-red #rooms .buttons-container .cosmic-blue button:hover, .shy-red #rooms .buttons-container .cosmic-blue a:hover, .boring-blue #rooms .buttons-container .cosmic-blue button:hover, .boring-blue #rooms .buttons-container .cosmic-blue a:hover, .grass-green #rooms .buttons-container .cosmic-blue button:hover, .grass-green #rooms .buttons-container .cosmic-blue a:hover, .sexy-red #rooms .buttons-container .cosmic-blue button:hover, .sexy-red #rooms .buttons-container .cosmic-blue a:hover, .cosmic-blue #rooms .buttons-container button:hover, .cosmic-blue #rooms .buttons-container a:hover, .jungle-green #rooms .buttons-container .cosmic-blue button:hover, .jungle-green #rooms .buttons-container .cosmic-blue a:hover {
+  color: #00e1ff;
+  background-color: #150027;
+}
+
+.cosmic-blue #rooms {
+  position: relative;
+  top: 20vh;
+  margin: auto;
+  width: 20vw;
+  min-height: 15vh;
+  padding: 1vh 1vw;
+  background-color: #079cff;
+  border: 0.2em solid #00e1ff;
+}
+
+.cosmic-blue #rooms .buttons-container {
+  min-height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cosmic-blue #rooms .room-list {
+  position: absolute;
+  top: -.2em;
+  bottom: -.2em;
+  right: -11vw;
+  width: 10vw;
+  background-color: #079cff;
+  border: 0.2em solid #00e1ff;
+  overflow: auto;
+}
+
+.cosmic-blue #rooms .room-list span {
+  display: block;
+  margin-top: .3vh;
+  background-color: #150027;
+  text-align: center;
+  font-size: 1em;
+  color: #079cff;
+  width: 100%;
+  padding: 1vh 0;
+  border-top: 0.2em solid #150027;
+  border-bottom: 0.2em solid #150027;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.cosmic-blue #rooms .room-list span:hover {
+  background-color: #00e1ff;
+  color: #150027;
+  border-color: #150027;
+}
+
+.cosmic-blue #rooms .room-list #empty-list {
+  background-color: inherit;
+  color: #150027;
+}
+
+.cosmic-blue #room {
+  position: relative;
+  top: 3vh;
+  margin: auto;
+  width: 78vw;
+  min-height: 84vh;
+  padding: 1vh 1vw;
+  background-color: #079cff;
+  border: 0.2em solid #00e1ff;
+}
+
+.cosmic-blue #room h2 {
+  color: #150027;
+}
+
+.cosmic-blue #room .sidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10vw;
+}
+
+.cosmic-blue #room .sidebar.left {
+  left: .5vw;
+  text-align: center;
+}
+
+.cosmic-blue #room .sidebar.left h3 {
+  color: #150027;
+}
+
+.cosmic-blue #room .sidebar.left div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 3vh;
+}
+
+.cosmic-blue #room .sidebar.left div span {
+  background-color: #00e1ff;
+  color: #150027;
+  padding: .5vh .2vw;
+  margin-bottom: 1vw;
+}
+
+.cosmic-blue #room .sidebar.right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  right: 0;
+  padding: .5vh .5vw;
+}
+
+.cosmic-blue #room .sidebar.right button, .cosmic-blue #room .sidebar.right a {
+  background-color: #150027;
+  font-size: 1em;
+  text-align: center;
+  color: #079cff;
+  border-top: 0.2em solid #150027;
+  border-bottom: 0.2em solid #150027;
+  padding: .8em;
+  margin-bottom: 1vh;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.cosmic-blue #room .sidebar.right button:hover, .cosmic-blue #room .sidebar.right a:hover {
+  background-color: #00e1ff;
+  color: #150027;
+  border-color: #150027;
+}
+
+.cosmic-blue #room h2 {
+  text-align: center;
+  margin: 0 10vw;
+}
+
+.cosmic-blue #room .chat {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  left: 11vw;
+  right: 11vw;
+  top: 5vh;
+  bottom: 2vh;
+}
+
+.cosmic-blue #room .chat .message-container {
+  height: 100%;
+  overflow: auto;
+}
+
+.cosmic-blue #room .chat form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 25vh;
+}
+
+.cosmic-blue #room .chat form input {
+  background-color: #150027;
+  font-size: 1em;
+  color: #079cff;
+  padding: .8em;
+  border-top: 0.2em solid #150027;
+  border-bottom: 0.2em solid #150027;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.cosmic-blue #room .chat form input:hover {
+  background-color: #00e1ff;
+  color: #150027;
+  border-color: #150027;
+}
+
+.cosmic-blue #room .chat form textarea {
+  height: 100%;
+  resize: none;
+  font-size: 1.4em;
+  font-weight: 600;
+  padding: 1vh 1vw;
+  background-color: #00e1ff;
+  border-bottom: 0.2em solid #150027;
+}
+
+.cosmic-blue #room .user-list {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -9.5vw;
+  padding: 1vh .5vw;
+  border: 0.2em solid #00e1ff;
+  width: 7.6vw;
+  background-color: #079cff;
+  overflow: auto;
+}
+
+.cosmic-blue #room .user-list h3 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 3vh;
+}
+
+.cosmic-blue #room .user-list button {
+  display: block;
+  margin-bottom: 1vh;
+  background-color: #150027;
+  text-align: center;
+  font-size: 1em;
+  color: #079cff;
+  width: 100%;
+  padding: 1vh 0;
+  border-top: 0.2em solid #150027;
+  border-bottom: 0.2em solid #150027;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.cosmic-blue #room .user-list button:hover {
+  background-color: #00e1ff;
+  color: #150027;
+  border-color: #150027;
+}
+
+.cosmic-blue #room .user-list :last-child {
+  margin: 0;
+}
+
+.cosmic-blue #profile {
+  position: relative;
+  top: 5vh;
+  margin: auto;
+  width: 30vw;
+  min-height: 80vh;
+  padding: 1vh 1vw;
+  background-color: #079cff;
+  border: 0.2em solid #00e1ff;
+}
+
+.cosmic-blue #settings-container {
+  width: 44vw;
+  margin: auto;
+}
+
+.cosmic-blue #settings-list {
+  position: fixed;
+  top: 4vh;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 10vw;
+  border-left: 0.2em solid #00e1ff;
+  border-right: 0.2em solid #00e1ff;
+  padding: 4vh 0;
+  background-color: #079cff;
+}
+
+.cosmic-blue #settings-list span {
+  color: #150027;
+  font-size: 1.2em;
+  padding: 1vh 1.5vw 0;
+  border-bottom: 0.2em solid #00e1ff;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.cosmic-blue #settings-list span:hover {
+  background-color: #00e1ff;
+  border-color: #150027;
+}
+
+.cosmic-blue #settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  color: #150027;
+  width: 30vw;
+  min-height: 84vh;
+  padding: 6vh 1vw;
+  margin-left: 12vw;
+  border-left: 0.2em solid #00e1ff;
+  border-right: 0.2em solid #00e1ff;
+  background-color: #079cff;
+}
+
+.cosmic-blue #settings .model-container {
+  margin-bottom: 8vh;
+}
+
+.cosmic-blue #my-friends-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 20vw;
+  height: 80vh;
+  padding: 8vh 1vw;
+  margin: auto;
+  border-left: 0.2em solid #00e1ff;
+  border-right: 0.2em solid #00e1ff;
+  background-color: #079cff;
+}
+
+.cosmic-blue .user-in-friends {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 6vh;
+  padding: 1.5vh 1vw;
+  margin-bottom: 3vh;
+  color: #150027;
+  background-color: #00e1ff;
+}
+
+.cosmic-blue .user-in-friends div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cosmic-blue .user-in-friends div button {
+  background-color: #150027;
+  font-size: 1em;
+  text-align: center;
+  color: #00e1ff;
+  border-top: 0.2em solid #150027;
+  border-bottom: 0.2em solid #150027;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.cosmic-blue .user-in-friends div button:hover {
+  background-color: #00e1ff;
+  color: #150027;
+  border-color: #150027;
+}
+
+.cosmic-blue .message {
+  padding: 1vh 1vw;
+  margin-bottom: 2vh;
+  background-color: #150027;
+}
+
+.cosmic-blue .message span {
+  color: #00e1ff;
+  margin-right: 3vw;
+}
+
+.cosmic-blue .message p {
+  min-height: 18vh;
+  padding: 1vh 1vw;
+  color: #150027;
+  background-color: #079cff;
+  word-wrap: break-word;
+}
+
+.cosmic-blue #create-room {
+  position: relative;
+  top: 3vh;
+  margin: auto;
+  width: 80vw;
+  min-height: 84vh;
+  padding: 1vh 1vw;
+  background-color: #079cff;
+  border: 2px solid #150027;
+}
+
+.cosmic-blue #create-room form {
+  text-align: center;
+}
+
+.cosmic-blue #create-room form span {
+  font-size: 1.2em;
+  padding-right: 1vw;
+}
+
+.cosmic-blue #create-room form input {
+  font-size: 1em;
+  font-weight: 600;
+  background-color: white;
+  border: 2px solid #150027;
+  padding: .5em;
+}
+
+.cosmic-blue #create-room form [type='text'] {
+  width: 40vw;
+  text-align: center;
+}
+
+.cosmic-blue #create-room form [type='submit'] {
+  border-left: none;
+  cursor: pointer;
+}
+
+.jungle-green .container-1 {
+  background-color: #081600;
+  width: 98vw;
+  min-height: 96.1vh;
+  padding: 3.9vh 1vw 0 1vw;
+  overflow: hidden;
+}
+
+.jungle-green .container-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40vw;
+  height: 80vh;
+  padding: 8vh 1vw;
+  border-left: 0.2em solid #9dff00;
+  border-right: 0.2em solid #9dff00;
+  margin: auto;
+  background-color: #23af00;
+}
+
+.jungle-green #notification {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(8, 22, 0, 0.8);
+  z-index: 1;
+}
+
+.jungle-green #notification .notification-container {
+  position: relative;
+  top: 20vh;
+  margin: auto;
+  width: 14vw;
+  min-height: 12vh;
+  padding: 1vh 1vw;
+  background-color: #23af00;
+  border: 2px solid #081600;
+}
+
+.jungle-green #notification .notification-container h3 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 3vh;
+}
+
+.jungle-green #notification .buttons-deciders {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.jungle-green #notification .buttons-deciders button {
+  font: inherit;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 1vh 1vw;
+  color: #081600;
+  background-color: #9dff00;
+  border: 2px solid #081600;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  cursor: pointer;
+}
+
+.jungle-green #notification .buttons-deciders :nth-child(1):hover {
+  background-color: #61ff96;
+}
+
+.jungle-green #notification .buttons-deciders :nth-child(2):hover {
+  background-color: #f4fc85;
+}
+
+.shy-red #navigation .users-amount .jungle-green a, .shy-red #navigation .users-amount .jungle-green button, .shy-red #navigation .users-amount .jungle-green span, .shy-red #navigation .user-data .jungle-green .username, .boring-blue #navigation .users-amount .jungle-green a, .boring-blue #navigation .users-amount .jungle-green button, .boring-blue #navigation .users-amount .jungle-green span, .boring-blue #navigation .user-data .jungle-green .username, .grass-green #navigation .users-amount .jungle-green a, .grass-green #navigation .users-amount .jungle-green button, .grass-green #navigation .users-amount .jungle-green span, .grass-green #navigation .user-data .jungle-green .username, .sexy-red #navigation .users-amount .jungle-green a, .sexy-red #navigation .users-amount .jungle-green button, .sexy-red #navigation .users-amount .jungle-green span, .sexy-red #navigation .user-data .jungle-green .username, .cosmic-blue #navigation .users-amount .jungle-green a, .cosmic-blue #navigation .users-amount .jungle-green button, .cosmic-blue #navigation .users-amount .jungle-green span, .cosmic-blue #navigation .user-data .jungle-green .username, .jungle-green #navigation .users-amount a, .jungle-green #navigation .users-amount button, .jungle-green #navigation .users-amount span, .jungle-green #navigation .user-data .username {
+  font: inherit;
+  color: #081600;
+  font-size: 1.2em;
+  margin: 0;
+  padding: .3em;
+}
+
+.jungle-green #navigation {
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 96vw;
+  min-height: 2.4em;
+  padding: 0 2vw;
+  background-color: #9dff00;
+  z-index: 2;
+}
+
+.jungle-green #navigation .users-amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.jungle-green #navigation .users-amount div {
+  background-color: #081600;
+}
+
+.jungle-green #navigation .users-amount div span {
+  display: inline-block;
+  font-size: 1em;
+  color: #9dff00;
+}
+
+.jungle-green #navigation .user-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.jungle-green #menu-indicator {
+  padding: 0 .1em;
+  font-size: 1.6em;
+  color: #081600;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.jungle-green #menu-indicator:hover {
+  background-color: #081600;
+  color: #9dff00;
+}
+
+.jungle-green .menu {
+  position: fixed;
+  top: 2.4em;
+  right: -8vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 8vw;
+  height: 88vh;
+  padding: 4vh 0;
+  border-left: 0.2em solid #9dff00;
+  background-color: #23af00;
+  text-align: center;
+  z-index: 10;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.jungle-green .menu div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.jungle-green .menu .general-list a {
+  color: #081600;
+  font-size: 1.2em;
+  padding: 1vh 1.5vw 0;
+  border-bottom: 0.2em solid #9dff00;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.jungle-green .menu .general-list a:hover {
+  background-color: #9dff00;
+  border-color: #081600;
+}
+
+.jungle-green .menu .user-data-list a {
+  color: #081600;
+  background-color: #9dff00;
+  font-size: 1.2em;
+  margin: .5vh .2vw;
+  padding: .5vh 1.5vw;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.jungle-green .menu .user-data-list a:hover {
+  color: #9dff00;
+  background-color: #081600;
+}
+
+.jungle-green .menu .private-list a, .jungle-green .menu .private-list button {
+  font-size: 1.2em;
+  margin-top: 1vh;
+  color: #23af00;
+  background: #081600;
+  border-top: 0.2em solid #081600;
+  border-bottom: 0.2em solid #081600;
+  margin: .5vh .2vw;
+  padding: .5vh 1.5vw;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.jungle-green .menu .private-list a:hover, .jungle-green .menu .private-list button:hover {
+  background-color: #23af00;
+  color: #081600;
+  border-color: #081600;
+}
+
+.jungle-green .visible {
+  right: 0vw;
+}
+
+.jungle-green #login {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(8, 22, 0, 0.8);
+}
+
+.jungle-green #login div {
+  position: relative;
+  top: 15vh;
+  margin: auto;
+  width: 14vw;
+  min-height: 40vh;
+  padding: 1vh 1vw;
+  background-color: #23af00;
+  border: 2px solid #081600;
+}
+
+.jungle-green #login div h2 {
+  min-height: 6vh;
+  margin: 0;
+  text-align: center;
+  border-bottom: 2px solid #081600;
+}
+
+.jungle-green #login div h4 {
+  color: #081600;
+  margin: 0vh;
+  margin-bottom: 1vh;
+}
+
+.jungle-green #login div h4 span {
+  color: black;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}
+
+.jungle-green #login div form {
+  margin-top: 5vh;
+}
+
+.jungle-green #login div label h3 {
+  text-align: center;
+  margin: 0;
+  padding: 1vh 0;
+}
+
+.jungle-green #login div label input {
+  display: block;
+  width: 100%;
+  height: 2.5vh;
+  margin: auto;
+  border: 2px solid #081600;
+}
+
+.jungle-green #login div input[type="submit"] {
+  display: block;
+  margin: auto;
+  margin-top: 3vh;
+  width: 3vw;
+  height: 6vh;
+  font-size: 2em;
+  color: #081600;
+  background-color: #9dff00;
+  border: 2px solid #081600;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  cursor: pointer;
+}
+
+.jungle-green #login div input[type="submit"]:hover {
+  color: initial;
+}
+
+.jungle-green .user-in-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 10vh;
+  padding: 1vh 1vw;
+  margin-bottom: 3vh;
+  color: #081600;
+  background-color: #9dff00;
+}
+
+.jungle-green .user-in-list div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.jungle-green .user-in-list div button {
+  background-color: #081600;
+  font-size: 1em;
+  text-align: center;
+  color: #9dff00;
+  padding: .5vh 1.5vw;
+  border-top: 0.2em solid #081600;
+  border-bottom: 0.2em solid #081600;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.jungle-green .user-in-list div button:hover {
+  background-color: #9dff00;
+  color: #081600;
+  border-color: #081600;
+}
+
+.shy-red #rooms .buttons-container .jungle-green button, .shy-red #rooms .buttons-container .jungle-green a, .boring-blue #rooms .buttons-container .jungle-green button, .boring-blue #rooms .buttons-container .jungle-green a, .grass-green #rooms .buttons-container .jungle-green button, .grass-green #rooms .buttons-container .jungle-green a, .sexy-red #rooms .buttons-container .jungle-green button, .sexy-red #rooms .buttons-container .jungle-green a, .cosmic-blue #rooms .buttons-container .jungle-green button, .cosmic-blue #rooms .buttons-container .jungle-green a, .jungle-green #rooms .buttons-container button, .jungle-green #rooms .buttons-container a {
+  display: inline-block;
+  font: inherit;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 1.3vh 1.3vw;
+  color: #081600;
+  background-color: #9dff00;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  cursor: pointer;
+}
+
+.shy-red #rooms .buttons-container .jungle-green button:hover, .shy-red #rooms .buttons-container .jungle-green a:hover, .boring-blue #rooms .buttons-container .jungle-green button:hover, .boring-blue #rooms .buttons-container .jungle-green a:hover, .grass-green #rooms .buttons-container .jungle-green button:hover, .grass-green #rooms .buttons-container .jungle-green a:hover, .sexy-red #rooms .buttons-container .jungle-green button:hover, .sexy-red #rooms .buttons-container .jungle-green a:hover, .cosmic-blue #rooms .buttons-container .jungle-green button:hover, .cosmic-blue #rooms .buttons-container .jungle-green a:hover, .jungle-green #rooms .buttons-container button:hover, .jungle-green #rooms .buttons-container a:hover {
+  color: #9dff00;
+  background-color: #081600;
+}
+
+.jungle-green #rooms {
+  position: relative;
+  top: 20vh;
+  margin: auto;
+  width: 20vw;
+  min-height: 15vh;
+  padding: 1vh 1vw;
+  background-color: #23af00;
+  border: 0.2em solid #9dff00;
+}
+
+.jungle-green #rooms .buttons-container {
+  min-height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.jungle-green #rooms .room-list {
+  position: absolute;
+  top: -.2em;
+  bottom: -.2em;
+  right: -11vw;
+  width: 10vw;
+  background-color: #23af00;
+  border: 0.2em solid #9dff00;
+  overflow: auto;
+}
+
+.jungle-green #rooms .room-list span {
+  display: block;
+  margin-top: .3vh;
+  background-color: #081600;
+  text-align: center;
+  font-size: 1em;
+  color: #23af00;
+  width: 100%;
+  padding: 1vh 0;
+  border-top: 0.2em solid #081600;
+  border-bottom: 0.2em solid #081600;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.jungle-green #rooms .room-list span:hover {
+  background-color: #9dff00;
+  color: #081600;
+  border-color: #081600;
+}
+
+.jungle-green #rooms .room-list #empty-list {
+  background-color: inherit;
+  color: #081600;
+}
+
+.jungle-green #room {
+  position: relative;
+  top: 3vh;
+  margin: auto;
+  width: 78vw;
+  min-height: 84vh;
+  padding: 1vh 1vw;
+  background-color: #23af00;
+  border: 0.2em solid #9dff00;
+}
+
+.jungle-green #room h2 {
+  color: #081600;
+}
+
+.jungle-green #room .sidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10vw;
+}
+
+.jungle-green #room .sidebar.left {
+  left: .5vw;
+  text-align: center;
+}
+
+.jungle-green #room .sidebar.left h3 {
+  color: #081600;
+}
+
+.jungle-green #room .sidebar.left div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 3vh;
+}
+
+.jungle-green #room .sidebar.left div span {
+  background-color: #9dff00;
+  color: #081600;
+  padding: .5vh .2vw;
+  margin-bottom: 1vw;
+}
+
+.jungle-green #room .sidebar.right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  right: 0;
+  padding: .5vh .5vw;
+}
+
+.jungle-green #room .sidebar.right button, .jungle-green #room .sidebar.right a {
+  background-color: #081600;
+  font-size: 1em;
+  text-align: center;
+  color: #23af00;
+  border-top: 0.2em solid #081600;
+  border-bottom: 0.2em solid #081600;
+  padding: .8em;
+  margin-bottom: 1vh;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.jungle-green #room .sidebar.right button:hover, .jungle-green #room .sidebar.right a:hover {
+  background-color: #9dff00;
+  color: #081600;
+  border-color: #081600;
+}
+
+.jungle-green #room h2 {
+  text-align: center;
+  margin: 0 10vw;
+}
+
+.jungle-green #room .chat {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  left: 11vw;
+  right: 11vw;
+  top: 5vh;
+  bottom: 2vh;
+}
+
+.jungle-green #room .chat .message-container {
+  height: 100%;
+  overflow: auto;
+}
+
+.jungle-green #room .chat form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 25vh;
+}
+
+.jungle-green #room .chat form input {
+  background-color: #081600;
+  font-size: 1em;
+  color: #23af00;
+  padding: .8em;
+  border-top: 0.2em solid #081600;
+  border-bottom: 0.2em solid #081600;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.jungle-green #room .chat form input:hover {
+  background-color: #9dff00;
+  color: #081600;
+  border-color: #081600;
+}
+
+.jungle-green #room .chat form textarea {
+  height: 100%;
+  resize: none;
+  font-size: 1.4em;
+  font-weight: 600;
+  padding: 1vh 1vw;
+  background-color: #9dff00;
+  border-bottom: 0.2em solid #081600;
+}
+
+.jungle-green #room .user-list {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -9.5vw;
+  padding: 1vh .5vw;
+  border: 0.2em solid #9dff00;
+  width: 7.6vw;
+  background-color: #23af00;
+  overflow: auto;
+}
+
+.jungle-green #room .user-list h3 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 3vh;
+}
+
+.jungle-green #room .user-list button {
+  display: block;
+  margin-bottom: 1vh;
+  background-color: #081600;
+  text-align: center;
+  font-size: 1em;
+  color: #23af00;
+  width: 100%;
+  padding: 1vh 0;
+  border-top: 0.2em solid #081600;
+  border-bottom: 0.2em solid #081600;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.jungle-green #room .user-list button:hover {
+  background-color: #9dff00;
+  color: #081600;
+  border-color: #081600;
+}
+
+.jungle-green #room .user-list :last-child {
+  margin: 0;
+}
+
+.jungle-green #profile {
+  position: relative;
+  top: 5vh;
+  margin: auto;
+  width: 30vw;
+  min-height: 80vh;
+  padding: 1vh 1vw;
+  background-color: #23af00;
+  border: 0.2em solid #9dff00;
+}
+
+.jungle-green #settings-container {
+  width: 44vw;
+  margin: auto;
+}
+
+.jungle-green #settings-list {
+  position: fixed;
+  top: 4vh;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 10vw;
+  border-left: 0.2em solid #9dff00;
+  border-right: 0.2em solid #9dff00;
+  padding: 4vh 0;
+  background-color: #23af00;
+}
+
+.jungle-green #settings-list span {
+  color: #081600;
+  font-size: 1.2em;
+  padding: 1vh 1.5vw 0;
+  border-bottom: 0.2em solid #9dff00;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.jungle-green #settings-list span:hover {
+  background-color: #9dff00;
+  border-color: #081600;
+}
+
+.jungle-green #settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  color: #081600;
+  width: 30vw;
+  min-height: 84vh;
+  padding: 6vh 1vw;
+  margin-left: 12vw;
+  border-left: 0.2em solid #9dff00;
+  border-right: 0.2em solid #9dff00;
+  background-color: #23af00;
+}
+
+.jungle-green #settings .model-container {
+  margin-bottom: 8vh;
+}
+
+.jungle-green #my-friends-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 20vw;
+  height: 80vh;
+  padding: 8vh 1vw;
+  margin: auto;
+  border-left: 0.2em solid #9dff00;
+  border-right: 0.2em solid #9dff00;
+  background-color: #23af00;
+}
+
+.jungle-green .user-in-friends {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 6vh;
+  padding: 1.5vh 1vw;
+  margin-bottom: 3vh;
+  color: #081600;
+  background-color: #9dff00;
+}
+
+.jungle-green .user-in-friends div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.jungle-green .user-in-friends div button {
+  background-color: #081600;
+  font-size: 1em;
+  text-align: center;
+  color: #9dff00;
+  border-top: 0.2em solid #081600;
+  border-bottom: 0.2em solid #081600;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.jungle-green .user-in-friends div button:hover {
+  background-color: #9dff00;
+  color: #081600;
+  border-color: #081600;
+}
+
+.jungle-green .message {
+  padding: 1vh 1vw;
+  margin-bottom: 2vh;
+  background-color: #081600;
+}
+
+.jungle-green .message span {
+  color: #9dff00;
+  margin-right: 3vw;
+}
+
+.jungle-green .message p {
+  min-height: 18vh;
+  padding: 1vh 1vw;
+  color: #081600;
+  background-color: #23af00;
+  word-wrap: break-word;
+}
+
+.jungle-green #create-room {
+  position: relative;
+  top: 3vh;
+  margin: auto;
+  width: 80vw;
+  min-height: 84vh;
+  padding: 1vh 1vw;
+  background-color: #23af00;
+  border: 2px solid #081600;
+}
+
+.jungle-green #create-room form {
+  text-align: center;
+}
+
+.jungle-green #create-room form span {
+  font-size: 1.2em;
+  padding-right: 1vw;
+}
+
+.jungle-green #create-room form input {
+  font-size: 1em;
+  font-weight: 600;
+  background-color: white;
+  border: 2px solid #081600;
+  padding: .5em;
+}
+
+.jungle-green #create-room form [type='text'] {
+  width: 40vw;
+  text-align: center;
+}
+
+.jungle-green #create-room form [type='submit'] {
+  border-left: none;
+  cursor: pointer;
+}
+
+.model {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+.model div {
+  cursor: pointer;
+}
+
+.model div span {
+  display: block;
+}
+
+.shy-red-model .theme-model {
+  position: relative;
+  display: inline-block;
+  width: 14vw;
+  height: 14vh;
+}
+
+.shy-red-model .theme-model .navigation-model {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 10%;
+  background-color: #fdbccc;
+}
+
+.shy-red-model .theme-model .container-model-1 {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #882e2e;
+}
+
+.shy-red-model .theme-model .container-model-2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 33%;
+  right: 33%;
+  width: 33%;
+  background-color: #fddddd;
+}
+
+.boring-blue-model .theme-model {
+  position: relative;
+  display: inline-block;
+  width: 14vw;
+  height: 14vh;
+}
+
+.boring-blue-model .theme-model .navigation-model {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 10%;
+  background-color: #aae6fd;
+}
+
+.boring-blue-model .theme-model .container-model-1 {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #024661;
+}
+
+.boring-blue-model .theme-model .container-model-2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 33%;
+  right: 33%;
+  width: 33%;
+  background-color: #dff5fd;
+}
+
+.grass-green-model .theme-model {
+  position: relative;
+  display: inline-block;
+  width: 14vw;
+  height: 14vh;
+}
+
+.grass-green-model .theme-model .navigation-model {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 10%;
+  background-color: #b6ffad;
+}
+
+.grass-green-model .theme-model .container-model-1 {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #34662c;
+}
+
+.grass-green-model .theme-model .container-model-2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 33%;
+  right: 33%;
+  width: 33%;
+  background-color: #d3ffce;
+}
+
+.sexy-red-model .theme-model {
+  position: relative;
+  display: inline-block;
+  width: 14vw;
+  height: 14vh;
+}
+
+.sexy-red-model .theme-model .navigation-model {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 10%;
+  background-color: #ff3131;
+}
+
+.sexy-red-model .theme-model .container-model-1 {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #250000;
+}
+
+.sexy-red-model .theme-model .container-model-2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 33%;
+  right: 33%;
+  width: 33%;
+  background-color: #b45656;
+}
+
+.cosmic-blue-model .theme-model {
+  position: relative;
+  display: inline-block;
+  width: 14vw;
+  height: 14vh;
+}
+
+.cosmic-blue-model .theme-model .navigation-model {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 10%;
+  background-color: #00e1ff;
+}
+
+.cosmic-blue-model .theme-model .container-model-1 {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #150027;
+}
+
+.cosmic-blue-model .theme-model .container-model-2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 33%;
+  right: 33%;
+  width: 33%;
+  background-color: #079cff;
+}
+
+.jungle-green-model .theme-model {
+  position: relative;
+  display: inline-block;
+  width: 14vw;
+  height: 14vh;
+}
+
+.jungle-green-model .theme-model .navigation-model {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 10%;
+  background-color: #9dff00;
+}
+
+.jungle-green-model .theme-model .container-model-1 {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #081600;
+}
+
+.jungle-green-model .theme-model .container-model-2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 33%;
+  right: 33%;
+  width: 33%;
+  background-color: #23af00;
+}
+/*# sourceMappingURL=index.css.map */

@@ -11,8 +11,8 @@
         }
     }
     .menu {
-        position: absolute;
-        top: 4vh;
+        position: fixed;
+        top: 2.4em;
         right: -8vw;
         display: flex;
         flex-direction: column;
@@ -36,6 +36,11 @@
                 padding: 1vh 1.5vw 0;
                 border-bottom: .2em solid $color-m;
                 cursor: pointer;
+                transition-duration: .5s;
+                &:hover {
+                    background-color: $color-m;
+                    border-color: $color-s;
+                }
             }
         }
         .user-data-list {
@@ -46,6 +51,11 @@
                 margin: .5vh .2vw;
                 padding: .5vh 1.5vw;
                 cursor: pointer;
+                transition-duration: .5s;
+                &:hover {
+                    color: $color-m;
+                    background-color: $color-s;
+                }
             }
         }
         .private-list {
@@ -54,10 +64,17 @@
                 margin-top: 1vh;
                 color: $color-l;
                 background: $color-s;
-                border: none;
+                border-top: .2em solid $color-s;
+                border-bottom: .2em solid $color-s;
                 margin: .5vh .2vw;
                 padding: .5vh 1.5vw;
                 cursor: pointer;
+                transition-duration: .5s;
+                &:hover {
+                    background-color: $color-l;
+                    color: $color-s;
+                    border-color: $color-s;
+                }
             }
         }
 

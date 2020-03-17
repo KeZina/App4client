@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useHistory } from 'react-router-dom';
 
-const useCounter = (socket, data) => {
+const useCounter = (socket, data, name) => {
     const [siteUsers, setSiteUsers] = useState([]);
     const [roomUsers, setRoomUsers] = useState([]);
     const [registeredUsers, setRegisteredUsers] = useState([]);
@@ -9,13 +9,14 @@ const useCounter = (socket, data) => {
     const history = useHistory();
 
     useEffect(() => {
-        if(socket && history.location.pathname === '/users-list') {
+        if(socket && name && (history.location.pathname === '/users' || history.location.pathname === '/profile/my-friends')) {
             socket.emit('users', {
                 type: 'getUsers',
-                goal: 'getRegisteredUsers'
+                goal: 'getRegisteredUsers',
+                name
             })
         }
-    }, [socket, history.location.pathname])
+    }, [socket, history.location.pathname, siteUsers])
 
     useEffect(() => {
         const {type, users} = data;

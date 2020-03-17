@@ -1,0 +1,14 @@
+@mixin my-friends($color-s, $color-m, $color-l) {
+    #my-friends-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 20vw;
+        height: 80vh;
+        padding: 8vh 1vw;
+        margin: auto;
+        border-left: .2em solid $color-m;
+        border-right: .2em solid $color-m;
+        background-color: $color-l;
+    }
+}

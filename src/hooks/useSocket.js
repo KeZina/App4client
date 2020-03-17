@@ -30,7 +30,7 @@ const useSocket = () => {
     const user = useUser(socket, userData);
     const room = useRoom(socket, roomData, user.name);
     const message = useMessage(socket, messageData, room.enterRoom, user.name);
-    const counter = useCounter(socket, counterData);
+    const counter = useCounter(socket, counterData, user.name);
 
     return {
         socket,

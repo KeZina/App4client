@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import User from './User';
-import { CounterContext, MessageContext } from '../../../utils/context';
+import { CounterContext, MessageContext } from '../../utils/context';
 
-const Users = () => {
+const UsersList = () => {
     const counter = useContext(CounterContext);
     const message = useContext(MessageContext);
 
@@ -15,4 +15,4 @@ const Users = () => {
     )
 }
 
-export default Users;
+export default UsersList;

@@ -3,16 +3,25 @@ import React from 'react';
 const User = ({counter, message}) => {
     const data = counter.registeredUsers.map(user => {    
         return (
-            <div id = 'user' key = {user.name}>
-                <span>
-                    {user.name}
-                </span>
+            <div className = 'user-in-list' key = {user.name}>
+                <div>
+                    <span>
+                        <b>{user.name}</b>
+                    </span>
+                    <span>
+                        {user.relation}
+                    </span>
+                </div>
+
                 <div>
                     <span>
                         Date of registry: {user.dateOfRegistry}
                     </span>
                     <span>
-                        Account type:
+                        {user.status}
+                    </span>
+                    <span>
+                        Account type: {user.accountType}
                     </span>
                 </div>
                 <div>

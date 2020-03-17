@@ -23,7 +23,7 @@ const Menu = () => {
             </span>
             <div ref = {menu} className = 'menu'>
                 <div className = 'general-list'>
-                    <Link to = '/users-list'>
+                    <Link to = '/users'>
                         Users
                     </Link>
                     <Link to = '/rooms'>
@@ -31,18 +31,18 @@ const Menu = () => {
                     </Link> 
                 </div>
                 <div className = 'user-data-list'>
-                    <Link to = '/profile/messages'>
+                    <Link to = '/profile/my-messages'>
                         My messages
                     </Link>
-                    <Link to = '/profile/friends'>
+                    <Link to = '/profile/my-friends'>
                         My friends
                     </Link>
-                    <Link to = '/profile/favorite-rooms'>
+                    <Link to = '/profile/my-favorite-rooms'>
                         My favorite rooms
                     </Link>
                 </div>
                 <div className = 'private-list'>
-                    <Link to = '/settings'>
+                    <Link to = '/profile/my-settings'>
                         Settings
                     </Link>
                     <button onClick = {user.logout}>

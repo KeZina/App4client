@@ -8,16 +8,21 @@
 @import 'room';
 @import 'profile';
 @import 'settings';
-@import 'theme-model';
+@import 'my-friends';
+@import 'friend';
 @import 'message';
 @import 'create-room';
+
+@import 'theme-model';
 
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin:0;
     overflow-x: hidden;
 }
-button, a, input {
+button, a, input, textarea {
+    border: none;
+    text-decoration: none;
     outline: none;
 }
 
@@ -32,6 +37,8 @@ button, a, input {
     @include room($color-s, $color-m, $color-l);
     @include profile($color-s, $color-m, $color-l);
     @include settings($color-s, $color-m, $color-l);
+    @include my-friends($color-s, $color-m, $color-l);
+    @include friend($color-s, $color-m, $color-l);
     @include message($color-s, $color-m, $color-l);
     @include create-room($color-s, $color-m, $color-l);
 }
