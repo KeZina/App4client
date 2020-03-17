@@ -1,6 +1,11 @@
 import React from 'react';
 
-const User = ({counter, message}) => {
+const User = ({counter, message, setRecipient, setShowWriteMessage}) => {
+    const handleWriteMessage = name => {
+        setRecipient(name);
+        setShowWriteMessage(true);
+    }
+
     const data = counter.registeredUsers.map(user => {    
         return (
             <div className = 'user-in-list' key = {user.name}>
@@ -25,11 +30,11 @@ const User = ({counter, message}) => {
                     </span>
                 </div>
                 <div>
+                    <button onClick = {() => handleWriteMessage(user.name)}>
+                        Send a message
+                    </button>
                     <button onClick = {() => message.inviteToFriends(user.name)}>
                         Add to friends
-                    </button>
-                    <button>
-                        Send a message
                     </button>
                 </div>
             </div>

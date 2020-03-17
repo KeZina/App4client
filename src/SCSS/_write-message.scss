@@ -1,0 +1,84 @@
+@mixin write-message($color-s, $color-m, $color-l) {
+    #write-message {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba($color-s, $alpha: .8);
+        z-index: 5;
+        .write-message-container {
+            color: $color-s;
+            position: relative;
+            top: 10vh;
+            margin: auto;
+            width: 50vw;
+            min-height: 55vh;
+            background-color: $color-l;
+            border: .2em solid $color-m;
+            button {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: inherit; 
+                font-size: 1.8em;
+                color: $color-s;
+                cursor: pointer;
+                padding: .5vh .5vw;
+                z-index: 10;
+                transition-duration: .5s;
+                &:hover {
+                    color: $color-m;
+                }
+            }
+            form {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 1vh 1vw;
+                text-align: center;
+                input, textarea {
+                    width: 98%;
+                    height: 2vh;
+                    padding: .5vh 1%;
+                    font-size: 1.2em;
+                    // font-weight: 600;
+                    color: $color-s;
+                    background-color: $color-m;
+                    border: .2em solid $color-s;
+                }
+                textarea {
+                    resize: none;
+                    min-height: 10vh;
+                }
+                [name = 'recipient'] {
+                    text-align: center;
+                }
+                [type = 'submit'] {
+                    background-color: $color-s;
+                    font-size: 1.3em;
+                    font-weight: 300;
+                    color: $color-l;
+                    width: 40%;
+                    height: 6vh;
+                    margin: 0 auto;
+                    padding: 0;
+                    border-left: none;
+                    border-right: none;
+                    transition-duration: .5s;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: $color-l;
+                        color: $color-s;
+                        border-color: $color-s;
+                    }
+                }
+            }
+        }
+    }
+}

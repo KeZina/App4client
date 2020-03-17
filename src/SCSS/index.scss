@@ -10,13 +10,14 @@
 @import 'settings';
 @import 'my-friends';
 @import 'friend';
+@import 'write-message';
 @import 'message';
 @import 'create-room';
 
 @import 'theme-model';
 
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin:0;
     overflow-x: hidden;
 }
@@ -39,6 +40,7 @@ button, a, input, textarea {
     @include settings($color-s, $color-m, $color-l);
     @include my-friends($color-s, $color-m, $color-l);
     @include friend($color-s, $color-m, $color-l);
+    @include write-message($color-s, $color-m, $color-l);
     @include message($color-s, $color-m, $color-l);
     @include create-room($color-s, $color-m, $color-l);
 }

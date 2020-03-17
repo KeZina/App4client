@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RoomMessages = ({message}) => {
+const Message = ({message}) => {
     if(message.length === 0) {
         return null;
     } else {
@@ -18,4 +18,4 @@ const RoomMessages = ({message}) => {
     }
 }
 
-export default RoomMessages;
+export default Message;

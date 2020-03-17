@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const useMessage = (socket, data, enterRoom, currentUser) => {
+    const [privateMessages, setPrivateMessages] = useState([]);
     const [roomMessages, setRoomMessages] = useState([]);
     const [notes, setNotes] = useState([]);
 
@@ -21,6 +22,18 @@ const useMessage = (socket, data, enterRoom, currentUser) => {
             content: e.target.message.value,
             currentUser,
             roomUrl: localStorage.getItem('roomUrl')
+        })
+    }
+
+    const sendPrivateMessage = e => {
+        e.preventDefault();
+
+        socket.emit('message', {
+            type: 'createPrivateMessage',
+            currentUser,
+            targetUser: e.target.recipient.value,
+            title: e.target.title.value,
+            content: e.target.content.value
         })
     }
 
@@ -76,6 +89,9 @@ const useMessage = (socket, data, enterRoom, currentUser) => {
             ])
         } else if (type0 === 'roomMessages') {
             setRoomMessages(messages);
+        } else if (type0 === 'privateMessages') { 
+            console.log(messages);
+            setPrivateMessages(messages);
         }
     }, [data])
 
@@ -87,7 +103,8 @@ const useMessage = (socket, data, enterRoom, currentUser) => {
         handleFriends,
         acceptInvite,
         refuseInvite,
-        sendRoomMessage
+        sendRoomMessage,
+        sendPrivateMessage
     }
 }
 
