@@ -1,5 +1,5 @@
-@mixin message($color-s, $color-m, $color-l) {
-    .message {
+@mixin room-message($color-s, $color-m, $color-l) {
+    #room-message {
         padding: 1vh 1vw;
         margin-bottom: 2vh;
         background-color: $color-s;

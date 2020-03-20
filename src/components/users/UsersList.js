@@ -18,7 +18,7 @@ const UsersList = () => {
                         counter = {counter} 
                         message = {message}
                         setRecipient = {setRecipient}
-                        setShowWriteMessage = {setShowWriteMessage} 
+                        setShowWriteMessage = {setShowWriteMessage}
                     />
                 </div>
             </div>

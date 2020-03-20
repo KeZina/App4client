@@ -1,0 +1,28 @@
+@mixin private-message($color-s, $color-m, $color-l) {
+    #private-message {
+        padding: 1vh 1vw;
+        margin-bottom: 2vh;
+        border: .2em solid $color-m;
+        background-color: $color-s;
+        h3 {
+            margin: 0;
+            padding: .5vh .5vw;
+            background-color: $color-l;
+            color: $color-s;
+            text-align: center;
+        }
+        span {
+            display: block;
+            color: $color-m;
+            text-align: center;
+            padding: 1vh .5vw 0;
+        }
+        p {
+            min-height: 18vh;
+            padding: 1vh 1vw;
+            color: $color-s;
+            background-color: $color-l;
+            word-wrap: break-word;
+        }
+    }
+}

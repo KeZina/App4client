@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Message from '../message/Message';
+import RoomMessage from '../message/RoomMessage';
 import { RoomContext, CounterContext, MessageContext } from '../../utils/context';
 
 const Room = () => {
@@ -60,7 +60,7 @@ const Room = () => {
                 <h2>{room.name}</h2>
                 <div className = 'chat'>
                     <div className = 'message-container'>
-                        <Message message = {message.roomMessages} />
+                        <RoomMessage message = {message.roomMessages} />
                     </div>
                     <form onSubmit = {message.sendRoomMessage}>
                         <input type = 'submit' value = 'Send message' />

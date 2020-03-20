@@ -1,0 +1,39 @@
+@mixin my-messages($color-s, $color-m, $color-l) {
+    #my-messages-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 40vw;
+        height: 86vh;
+        padding: 8vh 0 2vh;
+        margin: auto;
+        .friends-list {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            height: 9vh;
+            padding: .3vh .5vw;
+            background-color: $color-l;
+            border: .2em solid $color-m;
+            overflow-x: hidden;
+            overflow-y: auto;
+            span {
+                display: inline-block;
+                background-color: $color-m;
+                color: $color-s;
+                text-align: center;
+                min-width: 5vw;
+                padding: .5vh .2vw;
+                margin: 1vh .5vw 0 0;
+                cursor: pointer;
+            }
+        }
+        .messages-list {
+            height: 70vh;
+            padding: 1vh 1vw;
+            background-color: $color-l;
+            border: .2em solid $color-m;
+            overflow: auto;
+        }
+    }
+}

@@ -10,8 +10,10 @@
 @import 'settings';
 @import 'my-friends';
 @import 'friend';
+@import 'my-messages';
 @import 'write-message';
-@import 'message';
+@import 'room-message';
+@import 'private-message';
 @import 'create-room';
 
 @import 'theme-model';
@@ -40,8 +42,10 @@ button, a, input, textarea {
     @include settings($color-s, $color-m, $color-l);
     @include my-friends($color-s, $color-m, $color-l);
     @include friend($color-s, $color-m, $color-l);
+    @include my-messages($color-s, $color-m, $color-l);
     @include write-message($color-s, $color-m, $color-l);
-    @include message($color-s, $color-m, $color-l);
+    @include room-message($color-s, $color-m, $color-l);
+    @include private-message($color-s, $color-m, $color-l);
     @include create-room($color-s, $color-m, $color-l);
 }
 

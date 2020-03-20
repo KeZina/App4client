@@ -5,7 +5,7 @@
     }
     #settings-list {
         position: fixed;
-        top: 4vh;
+        top: 3.9vh;
         bottom:0;
         display: flex;
         flex-direction: column;
@@ -13,7 +13,7 @@
         width: 10vw;
         border-left: .2em solid $color-m;
         border-right: .2em solid $color-m;
-        padding: 4vh 0;
+        padding: 6vh 0;
         background-color: $color-l;
         span {
             color: $color-s;

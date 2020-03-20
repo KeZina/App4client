@@ -1,9 +1,15 @@
 import { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 
 const useMessage = (socket, data, enterRoom, currentUser) => {
     const [privateMessages, setPrivateMessages] = useState([]);
+    const [privateMessagesSenders, setPrivateMessagesSenders] = useState([]);
+    const [privateMessagesTarget, setPrivateMessagesTarget] = useState('');
+
     const [roomMessages, setRoomMessages] = useState([]);
     const [notes, setNotes] = useState([]);
+
+    const history = useHistory();
 
     const inviteToRoom = (targetUser, room) => {
         socket.emit('message', {
@@ -25,18 +31,6 @@ const useMessage = (socket, data, enterRoom, currentUser) => {
         })
     }
 
-    const sendPrivateMessage = e => {
-        e.preventDefault();
-
-        socket.emit('message', {
-            type: 'createPrivateMessage',
-            currentUser,
-            targetUser: e.target.recipient.value,
-            title: e.target.title.value,
-            content: e.target.content.value
-        })
-    }
-
     const inviteToFriends = target => {
         socket.emit('message', {
             type: 'inviteToFriends',
@@ -53,7 +47,6 @@ const useMessage = (socket, data, enterRoom, currentUser) => {
             target
         })
     }
-
 
     const acceptInvite = note => {
         if(note.type1 === 'inviteToRoom') {
@@ -72,8 +65,39 @@ const useMessage = (socket, data, enterRoom, currentUser) => {
         setNotes(filteredNotes);
     }
 
+    const sendPrivateMessage = e => {
+        e.preventDefault();
+
+        socket.emit('message', {
+            type: 'createPrivateMessage',
+            currentUser,
+            targetUser: e.target.recipient.value,
+            title: e.target.title.value,
+            content: e.target.content.value
+        })
+    }
+
+    const getPrivateMessages = targetUser => {
+        setPrivateMessagesTarget(targetUser);
+
+        socket.emit('message', {
+            type: 'getPrivateMessages',
+            currentUser,
+            targetUser
+        })
+    }
+
     useEffect(() => {
-        const {type0, type1, content, current, target, roomUrl, messages} = data;
+        if(socket && currentUser && history.location.pathname === '/profile/my-messages') {
+            socket.emit('message', {
+                type: 'getPrivateMessagesSenders',
+                currentUser
+            })
+        }
+    }, [socket, currentUser, history.location.pathname])
+
+    useEffect(() => {
+        const {type0, type1, content, current, target, roomUrl, messages, senders} = data;
 
         if(type0 === 'note') {
             setNotes([
@@ -87,24 +111,32 @@ const useMessage = (socket, data, enterRoom, currentUser) => {
                     id: Math.floor(Math.random() * 1e10)
                 }
             ])
-        } else if (type0 === 'roomMessages') {
+        } else if(type0 === 'roomMessages') {
             setRoomMessages(messages);
-        } else if (type0 === 'privateMessages') { 
-            console.log(messages);
+        } else if(type0 === 'privateMessagesSenders') {
+            setPrivateMessagesSenders(senders)
+        } else if(type0 === 'privateMessages') { 
             setPrivateMessages(messages);
+        } else if(type0 === 'updatePrivateMessages') {
+            if(target === privateMessagesTarget) {
+                getPrivateMessages(target);
+            }
         }
     }, [data])
 
     return {
         notes,
         roomMessages,
+        privateMessages,
+        privateMessagesSenders,
         inviteToRoom,
         inviteToFriends,
         handleFriends,
         acceptInvite,
         refuseInvite,
         sendRoomMessage,
-        sendPrivateMessage
+        sendPrivateMessage,
+        getPrivateMessages
     }
 }
 
